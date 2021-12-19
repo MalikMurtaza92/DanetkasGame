@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoreDanetkasCollectionViewCell" id="gTV-IL-0wX" customClass="MoreDanetkasCollectionViewCell" customModule="DanetkasGameApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="732" height="740"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="732" height="740"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzZ-vo-h8L">
+                        <rect key="frame" x="0.0" y="44" width="732" height="662"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgc-pq-mIU">
+                                <rect key="frame" x="256" y="0.0" width="220" height="4"/>
+                                <color key="backgroundColor" name="DanetkasBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="5Ll-Ue-vJZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-fX-3LK">
+                                <rect key="frame" x="28" y="12" width="676" height="45"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search" translatesAutoresizingMaskIntoConstraints="NO" id="EG9-Px-RxK">
+                                        <rect key="frame" x="624.5" y="5.5" width="33.5" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EG9-Px-RxK" secondAttribute="height" multiplier="1:1" id="6ub-s6-eEY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtX-Mj-E5M">
+                                        <rect key="frame" x="18" y="5.5" width="598.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="DanetkasLightGray"/>
+                                <constraints>
+                                    <constraint firstItem="EG9-Px-RxK" firstAttribute="height" secondItem="E5f-fX-3LK" secondAttribute="height" multiplier="0.75" id="3hf-V5-vJI"/>
+                                    <constraint firstItem="xtX-Mj-E5M" firstAttribute="height" secondItem="E5f-fX-3LK" secondAttribute="height" multiplier="0.75" id="DCd-kT-6f9"/>
+                                    <constraint firstItem="EG9-Px-RxK" firstAttribute="leading" secondItem="xtX-Mj-E5M" secondAttribute="trailing" constant="8" id="E6Q-hF-cIM"/>
+                                    <constraint firstAttribute="height" constant="45" id="N7e-O4-CF5"/>
+                                    <constraint firstItem="EG9-Px-RxK" firstAttribute="centerY" secondItem="E5f-fX-3LK" secondAttribute="centerY" id="eh8-Wv-XRu"/>
+                                    <constraint firstItem="xtX-Mj-E5M" firstAttribute="centerY" secondItem="E5f-fX-3LK" secondAttribute="centerY" id="tAE-x6-ssZ"/>
+                                    <constraint firstItem="xtX-Mj-E5M" firstAttribute="leading" secondItem="E5f-fX-3LK" secondAttribute="leading" constant="18" id="u4v-dW-D7D"/>
+                                    <constraint firstAttribute="trailing" secondItem="EG9-Px-RxK" secondAttribute="trailing" constant="18" id="wI5-q7-Gxz"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RdT-pJ-Tnu">
+                                <rect key="frame" x="28" y="69" width="676" height="593"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vgc-pq-mIU" firstAttribute="top" secondItem="kzZ-vo-h8L" secondAttribute="top" id="70S-OK-S2s"/>
+                            <constraint firstItem="RdT-pJ-Tnu" firstAttribute="leading" secondItem="E5f-fX-3LK" secondAttribute="leading" id="83b-AY-qAW"/>
+                            <constraint firstItem="E5f-fX-3LK" firstAttribute="top" secondItem="kzZ-vo-h8L" secondAttribute="top" constant="12" id="Eme-Hu-dsm"/>
+                            <constraint firstItem="E5f-fX-3LK" firstAttribute="leading" secondItem="kzZ-vo-h8L" secondAttribute="leading" constant="28" id="NMf-HS-sqo"/>
+                            <constraint firstAttribute="bottom" secondItem="RdT-pJ-Tnu" secondAttribute="bottom" id="PxS-mw-uaQ"/>
+                            <constraint firstAttribute="trailing" secondItem="E5f-fX-3LK" secondAttribute="trailing" constant="28" id="VHF-iR-90g"/>
+                            <constraint firstItem="vgc-pq-mIU" firstAttribute="centerX" secondItem="kzZ-vo-h8L" secondAttribute="centerX" id="X32-ec-fnu"/>
+                            <constraint firstItem="RdT-pJ-Tnu" firstAttribute="trailing" secondItem="E5f-fX-3LK" secondAttribute="trailing" id="bSr-Qc-b5y"/>
+                            <constraint firstItem="RdT-pJ-Tnu" firstAttribute="top" secondItem="E5f-fX-3LK" secondAttribute="bottom" constant="12" id="ehb-VN-Ymf"/>
+                            <constraint firstItem="vgc-pq-mIU" firstAttribute="width" secondItem="kzZ-vo-h8L" secondAttribute="width" multiplier="0.3" id="kqO-9N-Tjb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="leading" secondItem="kzZ-vo-h8L" secondAttribute="leading" id="5kK-Z0-HE5"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="kzZ-vo-h8L" secondAttribute="trailing" id="Tlp-UH-bHf"/>
+                <constraint firstItem="kzZ-vo-h8L" firstAttribute="bottom" secondItem="ZTg-uK-7eu" secondAttribute="bottom" id="WmY-jd-EGS"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="kzZ-vo-h8L" secondAttribute="top" id="z2L-Zp-BQK"/>
+            </constraints>
+            <size key="customSize" width="732" height="740"/>
+            <connections>
+                <outlet property="indicatorView" destination="vgc-pq-mIU" id="RRt-hU-ses"/>
+                <outlet property="listTableView" destination="RdT-pJ-Tnu" id="Cjq-21-6fu"/>
+                <outlet property="searchTextField" destination="xtX-Mj-E5M" id="j16-rn-ZK5"/>
+                <outlet property="searchView" destination="E5f-fX-3LK" id="n4Y-SX-U0g"/>
+            </connections>
+            <point key="canvasLocation" x="205.79710144927537" y="139.95535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Search" width="45" height="45"/>
+        <namedColor name="DanetkasBlue">
+            <color red="0.10199999809265137" green="0.3449999988079071" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DanetkasLightGray">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

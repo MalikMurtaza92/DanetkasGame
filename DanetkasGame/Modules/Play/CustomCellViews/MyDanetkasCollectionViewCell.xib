@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyDanetkasCollectionViewCell" id="gTV-IL-0wX" customClass="MyDanetkasCollectionViewCell" customModule="DanetkasGameApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="380"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="304" height="380"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFw-2u-h8K">
+                        <rect key="frame" x="0.0" y="0.0" width="304" height="380"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3A-rN-5jf">
+                                <rect key="frame" x="12" y="0.0" width="91" height="4"/>
+                                <color key="backgroundColor" name="DanetkasBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="4YI-cU-uQb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qU8-Jx-jKA">
+                                <rect key="frame" x="28" y="12" width="248" height="45"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search" translatesAutoresizingMaskIntoConstraints="NO" id="UeH-0x-MhR">
+                                        <rect key="frame" x="196.5" y="5.5" width="33.5" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UeH-0x-MhR" secondAttribute="height" multiplier="1:1" id="l35-56-UaO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-RK-2JF">
+                                        <rect key="frame" x="18" y="5.5" width="170.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="DanetkasLightGray"/>
+                                <constraints>
+                                    <constraint firstItem="UeH-0x-MhR" firstAttribute="centerY" secondItem="qU8-Jx-jKA" secondAttribute="centerY" id="MUP-V1-aGG"/>
+                                    <constraint firstAttribute="trailing" secondItem="UeH-0x-MhR" secondAttribute="trailing" constant="18" id="TiC-ts-QcV"/>
+                                    <constraint firstItem="UeH-0x-MhR" firstAttribute="leading" secondItem="qlL-RK-2JF" secondAttribute="trailing" constant="8" id="XpA-eQ-X8W"/>
+                                    <constraint firstItem="qlL-RK-2JF" firstAttribute="leading" secondItem="qU8-Jx-jKA" secondAttribute="leading" constant="18" id="foa-j8-laB"/>
+                                    <constraint firstAttribute="height" constant="45" id="hAw-vt-60T"/>
+                                    <constraint firstItem="qlL-RK-2JF" firstAttribute="height" secondItem="qU8-Jx-jKA" secondAttribute="height" multiplier="0.75" id="jfU-lm-Zsc"/>
+                                    <constraint firstItem="qlL-RK-2JF" firstAttribute="centerY" secondItem="qU8-Jx-jKA" secondAttribute="centerY" id="qkT-4Z-A3r"/>
+                                    <constraint firstItem="UeH-0x-MhR" firstAttribute="height" secondItem="qU8-Jx-jKA" secondAttribute="height" multiplier="0.75" id="ygV-GA-OFR"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-Iw-R2g">
+                                <rect key="frame" x="28" y="69" width="248" height="311"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t3A-rN-5jf" firstAttribute="width" secondItem="gFw-2u-h8K" secondAttribute="width" multiplier="0.3" id="Afg-Th-Con"/>
+                            <constraint firstItem="LVT-Iw-R2g" firstAttribute="top" secondItem="qU8-Jx-jKA" secondAttribute="bottom" constant="12" id="BEr-FG-Cxv"/>
+                            <constraint firstAttribute="bottom" secondItem="LVT-Iw-R2g" secondAttribute="bottom" id="Bgt-4a-eVh"/>
+                            <constraint firstItem="LVT-Iw-R2g" firstAttribute="leading" secondItem="qU8-Jx-jKA" secondAttribute="leading" id="Gdv-li-c5W"/>
+                            <constraint firstItem="t3A-rN-5jf" firstAttribute="leading" secondItem="gFw-2u-h8K" secondAttribute="leading" constant="12" id="Joq-vJ-tmg"/>
+                            <constraint firstItem="qU8-Jx-jKA" firstAttribute="leading" secondItem="gFw-2u-h8K" secondAttribute="leading" constant="28" id="YHJ-4Y-Wuo"/>
+                            <constraint firstItem="qU8-Jx-jKA" firstAttribute="top" secondItem="gFw-2u-h8K" secondAttribute="top" constant="12" id="bw2-VX-2bs"/>
+                            <constraint firstItem="t3A-rN-5jf" firstAttribute="top" secondItem="gFw-2u-h8K" secondAttribute="top" id="xZZ-tB-nJp"/>
+                            <constraint firstItem="LVT-Iw-R2g" firstAttribute="trailing" secondItem="qU8-Jx-jKA" secondAttribute="trailing" id="yXt-pH-TC9"/>
+                            <constraint firstAttribute="trailing" secondItem="qU8-Jx-jKA" secondAttribute="trailing" constant="28" id="zC4-BT-aI8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gFw-2u-h8K" secondAttribute="trailing" id="86y-Un-HzO"/>
+                <constraint firstItem="gFw-2u-h8K" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FPa-7M-1Hr"/>
+                <constraint firstItem="gFw-2u-h8K" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="N5x-ej-41A"/>
+                <constraint firstAttribute="bottom" secondItem="gFw-2u-h8K" secondAttribute="bottom" id="SCU-WA-g4l"/>
+            </constraints>
+            <size key="customSize" width="304" height="380"/>
+            <connections>
+                <outlet property="indicatorView" destination="t3A-rN-5jf" id="X10-5j-2KN"/>
+                <outlet property="listTableView" destination="LVT-Iw-R2g" id="CDW-Z0-BqP"/>
+                <outlet property="searchTextField" destination="qlL-RK-2JF" id="BeZ-08-4cm"/>
+                <outlet property="searchView" destination="qU8-Jx-jKA" id="dRb-Xc-gjz"/>
+            </connections>
+            <point key="canvasLocation" x="266.66666666666669" y="158.03571428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Search" width="45" height="45"/>
+        <namedColor name="DanetkasBlue">
+            <color red="0.10199999809265137" green="0.3449999988079071" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DanetkasLightGray">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
