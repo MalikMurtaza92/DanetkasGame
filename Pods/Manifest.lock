@@ -1,0 +1,68 @@
+PODS:
+  - Alamofire (5.4.4)
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
+  - CardIO (5.4.1)
+  - Cosmos (23.0.0)
+  - GoogleSignIn (6.0.2):
+    - AppAuth (~> 1.4)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
+  - GTMSessionFetcher/Core (1.7.0)
+  - MBProgressHUD (1.2.0)
+  - PayPal-iOS-SDK (2.18.1):
+    - PayPal-iOS-SDK/CardIO (= 2.18.1)
+    - PayPal-iOS-SDK/Core (= 2.18.1)
+  - PayPal-iOS-SDK/CardIO (2.18.1):
+    - CardIO (~> 5.4.1)
+  - PayPal-iOS-SDK/Core (2.18.1)
+  - PayPalCheckout (0.81.0)
+  - SDWebImage (5.12.0):
+    - SDWebImage/Core (= 5.12.0)
+  - SDWebImage/Core (5.12.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4)
+  - Cosmos (~> 23.0)
+  - GoogleSignIn
+  - MBProgressHUD
+  - PayPal-iOS-SDK
+  - PayPalCheckout
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AppAuth
+    - CardIO
+    - Cosmos
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - MBProgressHUD
+    - PayPal-iOS-SDK
+    - PayPalCheckout
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
+  GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  PayPal-iOS-SDK: 70d56697aef502c130b9840e31dea5c6b8a350e1
+  PayPalCheckout: a32d08709c76f52265315c45f179f468042f8b04
+  SDWebImage: 4ea20cca2986adc5aacde07aa686742fd4c67a37
+
+PODFILE CHECKSUM: 4a66c4bb4c76061edc0c2dff66f10fcc25c1766c
+
+COCOAPODS: 1.11.2

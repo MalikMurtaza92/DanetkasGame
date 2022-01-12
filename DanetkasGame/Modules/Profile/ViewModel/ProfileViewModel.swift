@@ -23,7 +23,7 @@ class ProfileViewModel {
     
     func setupUserProfile(parameters: Parameters,completionHandler: @escaping profileCompletion) {
         
-        HTTPService.shared.postRequestWithHeader(endpoint: Endpoint.register, parameters: parameters,model: GameUser.self) { response, error in
+        HTTPService.shared.postRequestWithHeader(endpoint: Endpoint.profile, parameters: parameters,model: GameUser.self) { response, error in
             
             guard response != nil else {
                 completionHandler(nil,error)

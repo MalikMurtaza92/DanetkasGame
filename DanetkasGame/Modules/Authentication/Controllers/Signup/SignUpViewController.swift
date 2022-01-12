@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class SignUpViewController: BaseViewController {
     
@@ -52,6 +53,12 @@ class SignUpViewController: BaseViewController {
     }
     
     //MARK:- IBACTIONS
+    
+    @IBAction func playAsGuestButtonTouch(_ sender: UIButton) {
+        Utility.shared.isPlayAsGuest = true
+        self.popToRoot()
+    }
+    
     @IBAction func loginButtonTouch(_ sender: UIButton) {
         self.pop(completion: nil)
     }
@@ -120,6 +127,13 @@ class SignUpViewController: BaseViewController {
             } else {
                 self.showSimpleAlert(title: Constant.title, message: error)
             }
+        }
+    }
+    
+    
+    @IBAction func registerFacebookButtonPressed(_ sender: UIButton) {
+        viewModel.loginWithFacebook { user, error in
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
     

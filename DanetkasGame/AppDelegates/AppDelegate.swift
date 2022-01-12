@@ -9,6 +9,7 @@ import UIKit
 import GoogleSignIn
 import FacebookCore
 import AuthenticationServices
+import PayPalCheckout
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,6 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 break
             }
         }
+        
+        let config = CheckoutConfig(clientID: "AQxyBWkhclOXBj9jlkr3eV_F9PQ2O6yBD5f8i1oO2fJNQ5Xy_Ir6N45881igN7lyfIPvxr59JSGnH0B1",
+                                    returnUrl: "https://www.example.com/legal",
+                                    environment: .stage)
+        
+        Checkout.set(config: config)
+        
+        
         return true
     }
     

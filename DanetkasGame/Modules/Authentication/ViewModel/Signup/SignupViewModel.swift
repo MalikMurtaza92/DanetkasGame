@@ -8,6 +8,8 @@
 import UIKit
 import MBProgressHUD
 import GoogleSignIn
+import FBSDKLoginKit
+//import LegacyCoreKit
 
 class SignupViewModel {
     
@@ -78,6 +80,45 @@ class SignupViewModel {
             }
         }
         
+    }
+    
+    
+    //LOGIN WITH FACEBOOK
+    func loginWithFacebook(completionHandler: @escaping registrationCompletion) {
+        
+        MBProgressHUD.showAdded(to: self.viewController.view, animated: true)
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: Constant.facebookLoginPermissions, from: self.viewController) { loginResult, error in
+
+            
+            if let error = error {
+                MBProgressHUD.hide(for: self.viewController.view, animated: true)
+                self.viewController.showSimpleAlert(title: "Danetkas", message: error.localizedDescription)
+                completionHandler(nil,error.localizedDescription)
+                return
+            }
+            if AccessToken.isCurrentAccessTokenActive {
+                
+                GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email , gender"]).start { connection, result, error in
+                    if error == nil {
+                        
+                        let dictionay = result as? [String: Any]
+                        let name = dictionay!["name"] as! String
+                        let email = dictionay!["email"] as! String
+                        var user = GameUser()
+                        user.email = email
+                        user.name = name
+                        user.userType = "social"
+                        
+                        let params = ["email": user.email ?? "",
+                                      "userType": "social"]
+                        
+                        self.registerUser(parameters: params, completionHandler: completionHandler)
+                    }
+                }
+            }
+            
+        }
     }
     
     

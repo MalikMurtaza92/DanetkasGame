@@ -18,9 +18,9 @@ struct Endpoint {
     
     static var baseURL: String {
         #if DEBUG
-        let url = "http://18.118.228.171:2000/api/v1/denetkas/"
+        let url = "http://18.119.55.236:2000/api/v1/denetkas/"
         #else
-        let url = "http://18.118.228.171:2000/api/v1/denetkas/"
+        let url = "http://18.119.55.236:2000/api/v1/denetkas/"
         #endif
         return  url
     }
@@ -61,8 +61,12 @@ struct Endpoint {
         
     }
     
+    static var makeDanetkas: URL {
+        return URL(string: baseURL + Path.makeDanetkas.rawValue)!
+    }
+    
     static var baseURLImage: URL {
-        return URL(string: "http://18.118.228.171:2000/images/")!
+        return URL(string: "http://18.119.55.236:2000/images/")!
     }
     
     static var moreDanetka: URL{
@@ -72,11 +76,12 @@ struct Endpoint {
     enum Path: String {
         case register = "add/user/email"
         case login = "login"
-        case profile = "profile"
+        case profile = "add/user/profile"
         case allDanetkas = "fetch/danetkas"
         case myDanetkasFree = "fetch/free/danetkas"
         case myDanetkas = "fetch/user/danetkas"
         case moreDanetkas = "fetch/all/danetkas"
+        case makeDanetkas = "add/master/danetkas"
     }
     
 }
@@ -102,6 +107,9 @@ enum StoryboardIdentifiers: String {
     case CreditCardVC
     case ProfileVC
     case RulesVC
+    case LearnMoreVC
+    case AnswerVC
+    case BundleDiscountVC
 }
 
 //MARK:- STORYBOARD NAMES
@@ -127,7 +135,7 @@ struct Constant {
     
     
     static let GOOGLE_CLIENT_ID = "1088908408118-fgjg9rpn21jf95jbect9fuqjfl3fb7hn.apps.googleusercontent.com"
-    
+    static let APPLE_PAY_MERCHANT_IDENTIFIER = "merchant.com.armoomragames.denketa"
     //MARK:- FACEBOOK PERMISSIONS
     static let facebookLoginPermissions = ["public_profile","email"]
     

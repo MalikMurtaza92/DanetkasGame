@@ -67,7 +67,7 @@ class ProfileViewController: BaseViewController {
     
     @objc func handleDatePicker(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "yyyy/MM/dd"
         DOBTextField.text = dateFormatter.string(from: sender.date)
     }
     
@@ -101,9 +101,8 @@ class ProfileViewController: BaseViewController {
         let params = ["name": nameTextField.text ?? "",
                       "userName": userNameTextField.text ?? "",
                       "dateOfBirth": DOBTextField.text ?? "",
-                      "gender": genderTextField.text ?? "",
-                      "nationality": nationalityTextField.text ?? "",
-                      "email": Utility.shared.user?.email ?? ""]
+                      "gender": genderTextField.text?.lowercased() ?? "",
+                      "nationality": nationalityTextField.text ?? ""]
                         
         
         showProgress()

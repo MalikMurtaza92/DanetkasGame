@@ -17,6 +17,7 @@ class MoreDanetkasCollectionViewCell: UICollectionViewCell {
     
     //MARK:- PROPERTIES
     var delegate: MyDanetkasDelegate?
+    var index: Int?
     class var identifier: String {
         return "MoreDanetkasCollectionViewCell"
     }
@@ -66,6 +67,8 @@ extension MoreDanetkasCollectionViewCell: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MyDanetkasTableViewCell.identifier, for: indexPath) as! MyDanetkasTableViewCell
         cell.danetka = danetkas?[indexPath.row]
+        cell.listButton.isHidden = true
+        cell.popularLabel.isHidden = false
         return cell
     }
     
@@ -74,7 +77,7 @@ extension MoreDanetkasCollectionViewCell: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelect(tableView, didSelectRowAt: indexPath)
+        delegate?.didSelect(tableView,index: self.index,didSelectRowAt: indexPath, danetka: danetkas?[indexPath.row])
     }
     
 }

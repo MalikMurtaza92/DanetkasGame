@@ -9,11 +9,15 @@ import Foundation
 
 protocol Danetka: Codable {
     var id: Int? {get set}
-    var name: String? {get set}
+    var title: String? {get set}
     var image: String? {get set}
     var paymentStatus: String? {get set}
     var status: Bool? {get set}
     var updatedTime: Int? {get set}
+    var question: String? {get set}
+    var hint: String? {get set}
+    var answer: String? {get set}
+    var learnMore: String? {get set}
 }
 
 //struct Danetka: Codable {

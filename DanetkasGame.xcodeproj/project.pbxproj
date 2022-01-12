@@ -9,21 +9,247 @@
 /* Begin PBXBuildFile section */
 		243E2617276F966A00A06DF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2616276F966A00A06DF9 /* AppDelegate.swift */; };
 		243E2619276F966A00A06DF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2618276F966A00A06DF9 /* SceneDelegate.swift */; };
-		243E261B276F966A00A06DF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E261A276F966A00A06DF9 /* ViewController.swift */; };
-		243E261E276F966A00A06DF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E261C276F966A00A06DF9 /* Main.storyboard */; };
-		243E2620276F966D00A06DF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243E261F276F966D00A06DF9 /* Assets.xcassets */; };
 		243E2623276F966D00A06DF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E2621276F966D00A06DF9 /* LaunchScreen.storyboard */; };
+		243E2699276F9D8000A06DF9 /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2631276F9D8000A06DF9 /* RatingViewModel.swift */; };
+		243E269A276F9D8000A06DF9 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E2633276F9D8000A06DF9 /* Settings.storyboard */; };
+		243E269B276F9D8000A06DF9 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2636276F9D8000A06DF9 /* ContactViewController.swift */; };
+		243E269C276F9D8000A06DF9 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2639276F9D8000A06DF9 /* FAQTableViewCell.swift */; };
+		243E269D276F9D8000A06DF9 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E263A276F9D8000A06DF9 /* FAQViewController.swift */; };
+		243E269E276F9D8000A06DF9 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E263C276F9D8000A06DF9 /* RatingViewController.swift */; };
+		243E269F276F9D8000A06DF9 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E263E276F9D8000A06DF9 /* RatingTableViewCell.swift */; };
+		243E26A0276F9D8000A06DF9 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2640276F9D8000A06DF9 /* LanguageViewController.swift */; };
+		243E26A1276F9D8000A06DF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2642276F9D8000A06DF9 /* SettingsViewController.swift */; };
+		243E26A2276F9D8000A06DF9 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E2645276F9D8000A06DF9 /* Payment.storyboard */; };
+		243E26A3276F9D8000A06DF9 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2647276F9D8000A06DF9 /* PaymentViewController.swift */; };
+		243E26A4276F9D8000A06DF9 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2649276F9D8000A06DF9 /* CreditCardViewController.swift */; };
+		243E26A5276F9D8000A06DF9 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E264C276F9D8000A06DF9 /* ProfileViewModel.swift */; };
+		243E26A6276F9D8000A06DF9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E264E276F9D8000A06DF9 /* Profile.storyboard */; };
+		243E26A7276F9D8000A06DF9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2650276F9D8000A06DF9 /* ProfileViewController.swift */; };
+		243E26A8276F9D8000A06DF9 /* DictionaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2654276F9D8000A06DF9 /* DictionaryViewModel.swift */; };
+		243E26A9276F9D8000A06DF9 /* MainDashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2656276F9D8000A06DF9 /* MainDashboardCollectionViewCell.swift */; };
+		243E26AA276F9D8000A06DF9 /* DictionaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2658276F9D8000A06DF9 /* DictionaryTableViewCell.swift */; };
+		243E26AB276F9D8000A06DF9 /* RulesSuperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E265A276F9D8000A06DF9 /* RulesSuperCollectionViewCell.swift */; };
+		243E26AC276F9D8000A06DF9 /* RulesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E265B276F9D8000A06DF9 /* RulesCollectionViewCell.swift */; };
+		243E26AD276F9D8000A06DF9 /* RulesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E265C276F9D8000A06DF9 /* RulesCollectionViewCell.xib */; };
+		243E26AE276F9D8000A06DF9 /* ChallengeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E265D276F9D8000A06DF9 /* ChallengeCollectionViewCell.xib */; };
+		243E26AF276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E265E276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.swift */; };
+		243E26B0276F9D8000A06DF9 /* GamePlayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E265F276F9D8000A06DF9 /* GamePlayCollectionViewCell.xib */; };
+		243E26B1276F9D8000A06DF9 /* ChallengeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2660276F9D8000A06DF9 /* ChallengeCollectionViewCell.swift */; };
+		243E26B2276F9D8000A06DF9 /* GamePlayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2661276F9D8000A06DF9 /* GamePlayCollectionViewCell.swift */; };
+		243E26B3276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E2662276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.xib */; };
+		243E26B4276F9D8000A06DF9 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E2664276F9D8000A06DF9 /* Dashboard.storyboard */; };
+		243E26B5276F9D8000A06DF9 /* What'sDanetkasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2667276F9D8000A06DF9 /* What'sDanetkasViewController.swift */; };
+		243E26B6276F9D8000A06DF9 /* MainDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2669276F9D8000A06DF9 /* MainDashboardViewController.swift */; };
+		243E26B7276F9D8000A06DF9 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E266B276F9D8000A06DF9 /* DictionaryViewController.swift */; };
+		243E26B8276F9D8000A06DF9 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E266D276F9D8000A06DF9 /* RulesViewController.swift */; };
+		243E26B9276F9D8000A06DF9 /* DanetkasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2671276F9D8000A06DF9 /* DanetkasViewModel.swift */; };
+		243E26BA276F9D8000A06DF9 /* DanetkasCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2672276F9D8000A06DF9 /* DanetkasCellViewModel.swift */; };
+		243E26BB276F9D8000A06DF9 /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2674276F9D8000A06DF9 /* PlayViewModel.swift */; };
+		243E26BC276F9D8000A06DF9 /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E2676276F9D8000A06DF9 /* Play.storyboard */; };
+		243E26BD276F9D8000A06DF9 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2679276F9D8000A06DF9 /* MenuCollectionViewCell.swift */; };
+		243E26BE276F9D8000A06DF9 /* MyDanetkasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E267B276F9D8000A06DF9 /* MyDanetkasViewController.swift */; };
+		243E26BF276F9D8000A06DF9 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E267D276F9D8000A06DF9 /* PlayViewController.swift */; };
+		243E26C0276F9D8000A06DF9 /* DanetkaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E267F276F9D8000A06DF9 /* DanetkaViewController.swift */; };
+		243E26C1276F9D8000A06DF9 /* DanetkasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E2680276F9D8000A06DF9 /* DanetkasCollectionViewCell.xib */; };
+		243E26C2276F9D8000A06DF9 /* DanetkasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2681276F9D8000A06DF9 /* DanetkasCollectionViewCell.swift */; };
+		243E26C3276F9D8000A06DF9 /* MyDanetkasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E2683276F9D8000A06DF9 /* MyDanetkasTableViewCell.xib */; };
+		243E26C4276F9D8000A06DF9 /* MyDanetkasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2684276F9D8000A06DF9 /* MyDanetkasTableViewCell.swift */; };
+		243E26C5276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E2685276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.xib */; };
+		243E26C6276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E2686276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.xib */; };
+		243E26C7276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2687276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.swift */; };
+		243E26C8276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2688276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.swift */; };
+		243E26C9276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E2689276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.xib */; };
+		243E26CA276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E268A276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.swift */; };
+		243E26CB276F9D8000A06DF9 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E268E276F9D8000A06DF9 /* SignupViewModel.swift */; };
+		243E26CC276F9D8000A06DF9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2690276F9D8000A06DF9 /* LoginViewModel.swift */; };
+		243E26CD276F9D8000A06DF9 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E2692276F9D8000A06DF9 /* Authentication.storyboard */; };
+		243E26CE276F9D8000A06DF9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2695276F9D8000A06DF9 /* SignUpViewController.swift */; };
+		243E26CF276F9D8000A06DF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2697276F9D8000A06DF9 /* LoginViewController.swift */; };
+		243E26D6276F9D8A00A06DF9 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26D1276F9D8A00A06DF9 /* UIDevice+Extension.swift */; };
+		243E26D7276F9D8A00A06DF9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26D2276F9D8A00A06DF9 /* UIColor+Extension.swift */; };
+		243E26D8276F9D8A00A06DF9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26D3276F9D8A00A06DF9 /* UIView+Extension.swift */; };
+		243E26D9276F9D8A00A06DF9 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26D4276F9D8A00A06DF9 /* String+Extension.swift */; };
+		243E26DA276F9D8A00A06DF9 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26D5276F9D8A00A06DF9 /* ViewController+Extension.swift */; };
+		243E26E8276F9D9200A06DF9 /* APIBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26DD276F9D9200A06DF9 /* APIBaseManager.swift */; };
+		243E26E9276F9D9200A06DF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26DF276F9D9200A06DF9 /* Constants.swift */; };
+		243E26EA276F9D9200A06DF9 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26E1276F9D9200A06DF9 /* Utility.swift */; };
+		243E26EB276F9D9200A06DF9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26E3276F9D9200A06DF9 /* BaseViewController.swift */; };
+		243E26EC276F9D9200A06DF9 /* DanetkasHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26E5276F9D9200A06DF9 /* DanetkasHelper.swift */; };
+		243E26ED276F9D9200A06DF9 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E26E7276F9D9200A06DF9 /* KeychainItem.swift */; };
+		243E26F9276F9DA100A06DF9 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E26F3276F9DA100A06DF9 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		243E26FA276F9DA100A06DF9 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E26F4276F9DA100A06DF9 /* TPKeyboardAvoidingTableView.m */; };
+		243E26FB276F9DA100A06DF9 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E26F5276F9DA100A06DF9 /* TPKeyboardAvoidingScrollView.m */; };
+		243E26FC276F9DA100A06DF9 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E26F7276F9DA100A06DF9 /* TPKeyboardAvoidingCollectionView.m */; };
+		243E2722276F9DB900A06DF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243E26FF276F9DB900A06DF9 /* Assets.xcassets */; };
+		243E2723276F9DB900A06DF9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243E2701276F9DB900A06DF9 /* Colors.xcassets */; };
+		243E2724276F9DB900A06DF9 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2703276F9DB900A06DF9 /* Roboto-Medium.ttf */; };
+		243E2725276F9DB900A06DF9 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2704276F9DB900A06DF9 /* Roboto-Light.ttf */; };
+		243E2726276F9DB900A06DF9 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2705276F9DB900A06DF9 /* Poppins-ExtraLight.ttf */; };
+		243E2727276F9DB900A06DF9 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2706276F9DB900A06DF9 /* Poppins-ThinItalic.ttf */; };
+		243E2728276F9DB900A06DF9 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2707276F9DB900A06DF9 /* Poppins-ExtraLightItalic.ttf */; };
+		243E2729276F9DB900A06DF9 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2708276F9DB900A06DF9 /* Poppins-BoldItalic.ttf */; };
+		243E272A276F9DB900A06DF9 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2709276F9DB900A06DF9 /* Poppins-Light.ttf */; };
+		243E272B276F9DB900A06DF9 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E270A276F9DB900A06DF9 /* Poppins-Medium.ttf */; };
+		243E272C276F9DB900A06DF9 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E270B276F9DB900A06DF9 /* Roboto-Regular.ttf */; };
+		243E272D276F9DB900A06DF9 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E270C276F9DB900A06DF9 /* Roboto-MediumItalic.ttf */; };
+		243E272E276F9DB900A06DF9 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E270D276F9DB900A06DF9 /* Poppins-SemiBoldItalic.ttf */; };
+		243E272F276F9DB900A06DF9 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E270E276F9DB900A06DF9 /* Poppins-ExtraBoldItalic.ttf */; };
+		243E2730276F9DB900A06DF9 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E270F276F9DB900A06DF9 /* Poppins-ExtraBold.ttf */; };
+		243E2731276F9DB900A06DF9 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2710276F9DB900A06DF9 /* Poppins-BlackItalic.ttf */; };
+		243E2732276F9DB900A06DF9 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2711276F9DB900A06DF9 /* Roboto-ThinItalic.ttf */; };
+		243E2733276F9DB900A06DF9 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2712276F9DB900A06DF9 /* Roboto-BoldItalic.ttf */; };
+		243E2734276F9DB900A06DF9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2713276F9DB900A06DF9 /* Poppins-Regular.ttf */; };
+		243E2735276F9DB900A06DF9 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2714276F9DB900A06DF9 /* Roboto-LightItalic.ttf */; };
+		243E2736276F9DB900A06DF9 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2715276F9DB900A06DF9 /* Poppins-LightItalic.ttf */; };
+		243E2737276F9DB900A06DF9 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2716276F9DB900A06DF9 /* Roboto-Italic.ttf */; };
+		243E2738276F9DB900A06DF9 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2717276F9DB900A06DF9 /* Poppins-Bold.ttf */; };
+		243E2739276F9DB900A06DF9 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2718276F9DB900A06DF9 /* Roboto-BlackItalic.ttf */; };
+		243E273A276F9DB900A06DF9 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2719276F9DB900A06DF9 /* Poppins-Black.ttf */; };
+		243E273B276F9DB900A06DF9 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E271A276F9DB900A06DF9 /* Roboto-Bold.ttf */; };
+		243E273C276F9DB900A06DF9 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E271B276F9DB900A06DF9 /* Roboto-Thin.ttf */; };
+		243E273D276F9DB900A06DF9 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E271C276F9DB900A06DF9 /* Roboto-Black.ttf */; };
+		243E273E276F9DB900A06DF9 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E271D276F9DB900A06DF9 /* Poppins-Thin.ttf */; };
+		243E273F276F9DB900A06DF9 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E271E276F9DB900A06DF9 /* Poppins-SemiBold.ttf */; };
+		243E2740276F9DB900A06DF9 /* Aladin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E271F276F9DB900A06DF9 /* Aladin-Regular.ttf */; };
+		243E2741276F9DB900A06DF9 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2720276F9DB900A06DF9 /* Poppins-Italic.ttf */; };
+		243E2742276F9DB900A06DF9 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243E2721276F9DB900A06DF9 /* Poppins-MediumItalic.ttf */; };
+		243E2748276F9DC300A06DF9 /* GameUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2744276F9DC300A06DF9 /* GameUser.swift */; };
+		243E2749276F9DC300A06DF9 /* Danetka.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2745276F9DC300A06DF9 /* Danetka.swift */; };
+		243E274A276F9DC300A06DF9 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2746276F9DC300A06DF9 /* Pagination.swift */; };
+		243E274B276F9DC300A06DF9 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E2747276F9DC300A06DF9 /* APIResponse.swift */; };
+		247849C5278C922D00C593FE /* BundleDiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247849C4278C922D00C593FE /* BundleDiscountViewController.swift */; };
+		24A24BA32775055500C00746 /* LearnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A24BA22775055500C00746 /* LearnMoreViewController.swift */; };
+		24A24BA527751B9F00C00746 /* AnswerDanetkasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A24BA427751B9E00C00746 /* AnswerDanetkasViewController.swift */; };
+		24E53A1E278F1BFB008C66FE /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 24E53A1D278F1BFB008C66FE /* FacebookLogin */; };
+		24E53A20278F1BFB008C66FE /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 24E53A1F278F1BFB008C66FE /* FacebookShare */; };
+		9DDC58277E8257C536E11330 /* Pods_DanetkasGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694C28655339BD8CA44A2691 /* Pods_DanetkasGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		243E2613276F966A00A06DF9 /* DanetkasGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanetkasGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		243E2616276F966A00A06DF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		243E2618276F966A00A06DF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		243E261A276F966A00A06DF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		243E261D276F966A00A06DF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		243E261F276F966D00A06DF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		243E2622276F966D00A06DF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		243E2624276F966D00A06DF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		243E2631276F9D8000A06DF9 /* RatingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewModel.swift; sourceTree = "<group>"; };
+		243E2633276F9D8000A06DF9 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		243E2636276F9D8000A06DF9 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		243E2639276F9D8000A06DF9 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		243E263A276F9D8000A06DF9 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		243E263C276F9D8000A06DF9 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		243E263E276F9D8000A06DF9 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
+		243E2640276F9D8000A06DF9 /* LanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		243E2642276F9D8000A06DF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		243E2645276F9D8000A06DF9 /* Payment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		243E2647276F9D8000A06DF9 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		243E2649276F9D8000A06DF9 /* CreditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
+		243E264C276F9D8000A06DF9 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		243E264E276F9D8000A06DF9 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		243E2650276F9D8000A06DF9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		243E2654276F9D8000A06DF9 /* DictionaryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewModel.swift; sourceTree = "<group>"; };
+		243E2656276F9D8000A06DF9 /* MainDashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E2658276F9D8000A06DF9 /* DictionaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewCell.swift; sourceTree = "<group>"; };
+		243E265A276F9D8000A06DF9 /* RulesSuperCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesSuperCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E265B276F9D8000A06DF9 /* RulesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E265C276F9D8000A06DF9 /* RulesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RulesCollectionViewCell.xib; sourceTree = "<group>"; };
+		243E265D276F9D8000A06DF9 /* ChallengeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeCollectionViewCell.xib; sourceTree = "<group>"; };
+		243E265E276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraRulesCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E265F276F9D8000A06DF9 /* GamePlayCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GamePlayCollectionViewCell.xib; sourceTree = "<group>"; };
+		243E2660276F9D8000A06DF9 /* ChallengeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E2661276F9D8000A06DF9 /* GamePlayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E2662276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExtraRulesCollectionViewCell.xib; sourceTree = "<group>"; };
+		243E2664276F9D8000A06DF9 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		243E2667276F9D8000A06DF9 /* What'sDanetkasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "What'sDanetkasViewController.swift"; sourceTree = "<group>"; };
+		243E2669276F9D8000A06DF9 /* MainDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDashboardViewController.swift; sourceTree = "<group>"; };
+		243E266B276F9D8000A06DF9 /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		243E266D276F9D8000A06DF9 /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		243E2671276F9D8000A06DF9 /* DanetkasViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanetkasViewModel.swift; sourceTree = "<group>"; };
+		243E2672276F9D8000A06DF9 /* DanetkasCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanetkasCellViewModel.swift; sourceTree = "<group>"; };
+		243E2674276F9D8000A06DF9 /* PlayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
+		243E2676276F9D8000A06DF9 /* Play.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
+		243E2679276F9D8000A06DF9 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E267B276F9D8000A06DF9 /* MyDanetkasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDanetkasViewController.swift; sourceTree = "<group>"; };
+		243E267D276F9D8000A06DF9 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		243E267F276F9D8000A06DF9 /* DanetkaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanetkaViewController.swift; sourceTree = "<group>"; };
+		243E2680276F9D8000A06DF9 /* DanetkasCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DanetkasCollectionViewCell.xib; sourceTree = "<group>"; };
+		243E2681276F9D8000A06DF9 /* DanetkasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanetkasCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E2683276F9D8000A06DF9 /* MyDanetkasTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDanetkasTableViewCell.xib; sourceTree = "<group>"; };
+		243E2684276F9D8000A06DF9 /* MyDanetkasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDanetkasTableViewCell.swift; sourceTree = "<group>"; };
+		243E2685276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeMyDanetkaCollectionViewCell.xib; sourceTree = "<group>"; };
+		243E2686276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDanetkasCollectionViewCell.xib; sourceTree = "<group>"; };
+		243E2687276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreDanetkasCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E2688276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeMyDanetkaCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E2689276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreDanetkasCollectionViewCell.xib; sourceTree = "<group>"; };
+		243E268A276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDanetkasCollectionViewCell.swift; sourceTree = "<group>"; };
+		243E268E276F9D8000A06DF9 /* SignupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		243E2690276F9D8000A06DF9 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		243E2692276F9D8000A06DF9 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		243E2695276F9D8000A06DF9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		243E2697276F9D8000A06DF9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		243E26D1276F9D8A00A06DF9 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		243E26D2276F9D8A00A06DF9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		243E26D3276F9D8A00A06DF9 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		243E26D4276F9D8A00A06DF9 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		243E26D5276F9D8A00A06DF9 /* ViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		243E26DD276F9D9200A06DF9 /* APIBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIBaseManager.swift; sourceTree = "<group>"; };
+		243E26DF276F9D9200A06DF9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		243E26E1276F9D9200A06DF9 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		243E26E3276F9D9200A06DF9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		243E26E5276F9D9200A06DF9 /* DanetkasHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanetkasHelper.swift; sourceTree = "<group>"; };
+		243E26E7276F9D9200A06DF9 /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		243E26F0276F9DA100A06DF9 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		243E26F1276F9DA100A06DF9 /* UrbanPoint-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UrbanPoint-Bridging-Header.h"; sourceTree = "<group>"; };
+		243E26F2276F9DA100A06DF9 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		243E26F3276F9DA100A06DF9 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		243E26F4276F9DA100A06DF9 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		243E26F5276F9DA100A06DF9 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		243E26F6276F9DA100A06DF9 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		243E26F7276F9DA100A06DF9 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		243E26F8276F9DA100A06DF9 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		243E26FF276F9DB900A06DF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		243E2701276F9DB900A06DF9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		243E2703276F9DB900A06DF9 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		243E2704276F9DB900A06DF9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		243E2705276F9DB900A06DF9 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		243E2706276F9DB900A06DF9 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		243E2707276F9DB900A06DF9 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		243E2708276F9DB900A06DF9 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		243E2709276F9DB900A06DF9 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		243E270A276F9DB900A06DF9 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		243E270B276F9DB900A06DF9 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		243E270C276F9DB900A06DF9 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		243E270D276F9DB900A06DF9 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		243E270E276F9DB900A06DF9 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		243E270F276F9DB900A06DF9 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		243E2710276F9DB900A06DF9 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		243E2711276F9DB900A06DF9 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		243E2712276F9DB900A06DF9 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		243E2713276F9DB900A06DF9 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		243E2714276F9DB900A06DF9 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		243E2715276F9DB900A06DF9 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		243E2716276F9DB900A06DF9 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		243E2717276F9DB900A06DF9 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		243E2718276F9DB900A06DF9 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		243E2719276F9DB900A06DF9 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		243E271A276F9DB900A06DF9 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		243E271B276F9DB900A06DF9 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		243E271C276F9DB900A06DF9 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		243E271D276F9DB900A06DF9 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		243E271E276F9DB900A06DF9 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		243E271F276F9DB900A06DF9 /* Aladin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aladin-Regular.ttf"; sourceTree = "<group>"; };
+		243E2720276F9DB900A06DF9 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		243E2721276F9DB900A06DF9 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		243E2744276F9DC300A06DF9 /* GameUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameUser.swift; sourceTree = "<group>"; };
+		243E2745276F9DC300A06DF9 /* Danetka.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Danetka.swift; sourceTree = "<group>"; };
+		243E2746276F9DC300A06DF9 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		243E2747276F9DC300A06DF9 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		243E2757276FA3B000A06DF9 /* DanetkasGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DanetkasGame.entitlements; sourceTree = "<group>"; };
+		247849C4278C922D00C593FE /* BundleDiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleDiscountViewController.swift; sourceTree = "<group>"; };
+		24A24BA22775055500C00746 /* LearnMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreViewController.swift; sourceTree = "<group>"; };
+		24A24BA427751B9E00C00746 /* AnswerDanetkasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerDanetkasViewController.swift; sourceTree = "<group>"; };
+		694C28655339BD8CA44A2691 /* Pods_DanetkasGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DanetkasGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71BF1519304C11AA58D2BF4F /* Pods-DanetkasGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanetkasGame.debug.xcconfig"; path = "Target Support Files/Pods-DanetkasGame/Pods-DanetkasGame.debug.xcconfig"; sourceTree = "<group>"; };
+		853E0243DC2E6C7E0B2655AA /* Pods-DanetkasGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanetkasGame.release.xcconfig"; path = "Target Support Files/Pods-DanetkasGame/Pods-DanetkasGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +257,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E53A1E278F1BFB008C66FE /* FacebookLogin in Frameworks */,
+				9DDC58277E8257C536E11330 /* Pods_DanetkasGame.framework in Frameworks */,
+				24E53A20278F1BFB008C66FE /* FacebookShare in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +271,8 @@
 			children = (
 				243E2615276F966A00A06DF9 /* DanetkasGame */,
 				243E2614276F966A00A06DF9 /* Products */,
+				CE723E300CC6D346CB03B9B0 /* Pods */,
+				73ABF405581EF7B6F9630F02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +287,705 @@
 		243E2615276F966A00A06DF9 /* DanetkasGame */ = {
 			isa = PBXGroup;
 			children = (
-				243E2616276F966A00A06DF9 /* AppDelegate.swift */,
-				243E2618276F966A00A06DF9 /* SceneDelegate.swift */,
-				243E261A276F966A00A06DF9 /* ViewController.swift */,
-				243E261C276F966A00A06DF9 /* Main.storyboard */,
-				243E261F276F966D00A06DF9 /* Assets.xcassets */,
-				243E2621276F966D00A06DF9 /* LaunchScreen.storyboard */,
-				243E2624276F966D00A06DF9 /* Info.plist */,
+				243E2757276FA3B000A06DF9 /* DanetkasGame.entitlements */,
+				243E274C276F9E3C00A06DF9 /* AppDelegates */,
+				243E26DB276F9D9200A06DF9 /* Utilities */,
+				243E26D0276F9D8A00A06DF9 /* Extensions */,
+				243E262A276F9D8000A06DF9 /* Modules */,
+				243E26EE276F9DA100A06DF9 /* ThirdParty */,
+				243E26FD276F9DB900A06DF9 /* Assets */,
+				243E2743276F9DC300A06DF9 /* Model */,
+				243E274D276F9E6600A06DF9 /* PlistFile */,
 			);
 			path = DanetkasGame;
+			sourceTree = "<group>";
+		};
+		243E262A276F9D8000A06DF9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				243E262B276F9D8000A06DF9 /* LaunchScreen */,
+				243E262E276F9D8000A06DF9 /* Settings */,
+				243E2643276F9D8000A06DF9 /* Payment */,
+				243E264A276F9D8000A06DF9 /* Profile */,
+				243E2651276F9D8000A06DF9 /* MainDashboard */,
+				243E266E276F9D8000A06DF9 /* Play */,
+				243E268B276F9D8000A06DF9 /* Authentication */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		243E262B276F9D8000A06DF9 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				243E2621276F966D00A06DF9 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		243E262E276F9D8000A06DF9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				243E262F276F9D8000A06DF9 /* ViewModel */,
+				243E2632276F9D8000A06DF9 /* Storyboard */,
+				243E2634276F9D8000A06DF9 /* Controllers */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		243E262F276F9D8000A06DF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				243E2630276F9D8000A06DF9 /* Rating */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		243E2630276F9D8000A06DF9 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				243E2631276F9D8000A06DF9 /* RatingViewModel.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		243E2632276F9D8000A06DF9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				243E2633276F9D8000A06DF9 /* Settings.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		243E2634276F9D8000A06DF9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				243E2635276F9D8000A06DF9 /* Contact */,
+				243E2637276F9D8000A06DF9 /* FAQ */,
+				243E263B276F9D8000A06DF9 /* RateTheApp */,
+				243E263F276F9D8000A06DF9 /* Language */,
+				243E2641276F9D8000A06DF9 /* Setting */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		243E2635276F9D8000A06DF9 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				243E2636276F9D8000A06DF9 /* ContactViewController.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		243E2637276F9D8000A06DF9 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				243E2638276F9D8000A06DF9 /* cells */,
+				243E263A276F9D8000A06DF9 /* FAQViewController.swift */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		243E2638276F9D8000A06DF9 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				243E2639276F9D8000A06DF9 /* FAQTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		243E263B276F9D8000A06DF9 /* RateTheApp */ = {
+			isa = PBXGroup;
+			children = (
+				243E263C276F9D8000A06DF9 /* RatingViewController.swift */,
+				243E263D276F9D8000A06DF9 /* Cell */,
+			);
+			path = RateTheApp;
+			sourceTree = "<group>";
+		};
+		243E263D276F9D8000A06DF9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				243E263E276F9D8000A06DF9 /* RatingTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		243E263F276F9D8000A06DF9 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				243E2640276F9D8000A06DF9 /* LanguageViewController.swift */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		243E2641276F9D8000A06DF9 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				243E2642276F9D8000A06DF9 /* SettingsViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		243E2643276F9D8000A06DF9 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				243E2644276F9D8000A06DF9 /* Storyboard */,
+				243E2646276F9D8000A06DF9 /* Controller */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		243E2644276F9D8000A06DF9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				243E2645276F9D8000A06DF9 /* Payment.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		243E2646276F9D8000A06DF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				243E2647276F9D8000A06DF9 /* PaymentViewController.swift */,
+				243E2648276F9D8000A06DF9 /* New Group */,
+				243E2649276F9D8000A06DF9 /* CreditCardViewController.swift */,
+				247849C4278C922D00C593FE /* BundleDiscountViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		243E2648276F9D8000A06DF9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		243E264A276F9D8000A06DF9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				243E264B276F9D8000A06DF9 /* ViewModel */,
+				243E264D276F9D8000A06DF9 /* Storyboard */,
+				243E264F276F9D8000A06DF9 /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		243E264B276F9D8000A06DF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				243E264C276F9D8000A06DF9 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		243E264D276F9D8000A06DF9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				243E264E276F9D8000A06DF9 /* Profile.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		243E264F276F9D8000A06DF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				243E2650276F9D8000A06DF9 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		243E2651276F9D8000A06DF9 /* MainDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				243E2652276F9D8000A06DF9 /* ViewModel */,
+				243E2655276F9D8000A06DF9 /* Cells */,
+				243E2663276F9D8000A06DF9 /* Storyboard */,
+				243E2665276F9D8000A06DF9 /* Controller */,
+			);
+			path = MainDashboard;
+			sourceTree = "<group>";
+		};
+		243E2652276F9D8000A06DF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				243E2653276F9D8000A06DF9 /* Dictionary */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		243E2653276F9D8000A06DF9 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				243E2654276F9D8000A06DF9 /* DictionaryViewModel.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		243E2655276F9D8000A06DF9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				243E2656276F9D8000A06DF9 /* MainDashboardCollectionViewCell.swift */,
+				243E2657276F9D8000A06DF9 /* Dictionary */,
+				243E2659276F9D8000A06DF9 /* Rules */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		243E2657276F9D8000A06DF9 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				243E2658276F9D8000A06DF9 /* DictionaryTableViewCell.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		243E2659276F9D8000A06DF9 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				243E265A276F9D8000A06DF9 /* RulesSuperCollectionViewCell.swift */,
+				243E265B276F9D8000A06DF9 /* RulesCollectionViewCell.swift */,
+				243E265C276F9D8000A06DF9 /* RulesCollectionViewCell.xib */,
+				243E265D276F9D8000A06DF9 /* ChallengeCollectionViewCell.xib */,
+				243E265E276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.swift */,
+				243E265F276F9D8000A06DF9 /* GamePlayCollectionViewCell.xib */,
+				243E2660276F9D8000A06DF9 /* ChallengeCollectionViewCell.swift */,
+				243E2661276F9D8000A06DF9 /* GamePlayCollectionViewCell.swift */,
+				243E2662276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.xib */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		243E2663276F9D8000A06DF9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				243E2664276F9D8000A06DF9 /* Dashboard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		243E2665276F9D8000A06DF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				243E2666276F9D8000A06DF9 /* What'sDanetkas */,
+				243E2668276F9D8000A06DF9 /* Dashboard */,
+				243E266A276F9D8000A06DF9 /* Dictionary */,
+				243E266C276F9D8000A06DF9 /* Rules */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		243E2666276F9D8000A06DF9 /* What'sDanetkas */ = {
+			isa = PBXGroup;
+			children = (
+				243E2667276F9D8000A06DF9 /* What'sDanetkasViewController.swift */,
+			);
+			path = "What'sDanetkas";
+			sourceTree = "<group>";
+		};
+		243E2668276F9D8000A06DF9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				243E2669276F9D8000A06DF9 /* MainDashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		243E266A276F9D8000A06DF9 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				243E266B276F9D8000A06DF9 /* DictionaryViewController.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		243E266C276F9D8000A06DF9 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				243E266D276F9D8000A06DF9 /* RulesViewController.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		243E266E276F9D8000A06DF9 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				243E266F276F9D8000A06DF9 /* ViewModel */,
+				243E2675276F9D8000A06DF9 /* Storyboard */,
+				243E2677276F9D8000A06DF9 /* Controller */,
+				243E2682276F9D8000A06DF9 /* CustomCellViews */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		243E266F276F9D8000A06DF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				243E2670276F9D8000A06DF9 /* Danetkas */,
+				243E2673276F9D8000A06DF9 /* Play */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		243E2670276F9D8000A06DF9 /* Danetkas */ = {
+			isa = PBXGroup;
+			children = (
+				243E2671276F9D8000A06DF9 /* DanetkasViewModel.swift */,
+				243E2672276F9D8000A06DF9 /* DanetkasCellViewModel.swift */,
+			);
+			path = Danetkas;
+			sourceTree = "<group>";
+		};
+		243E2673276F9D8000A06DF9 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				243E2674276F9D8000A06DF9 /* PlayViewModel.swift */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		243E2675276F9D8000A06DF9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				243E2676276F9D8000A06DF9 /* Play.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		243E2677276F9D8000A06DF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				243E2678276F9D8000A06DF9 /* Cells */,
+				243E267A276F9D8000A06DF9 /* MyDanetka */,
+				243E267C276F9D8000A06DF9 /* Play */,
+				24A24BA22775055500C00746 /* LearnMoreViewController.swift */,
+				24A24BA427751B9E00C00746 /* AnswerDanetkasViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		243E2678276F9D8000A06DF9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				243E2679276F9D8000A06DF9 /* MenuCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		243E267A276F9D8000A06DF9 /* MyDanetka */ = {
+			isa = PBXGroup;
+			children = (
+				243E267B276F9D8000A06DF9 /* MyDanetkasViewController.swift */,
+			);
+			path = MyDanetka;
+			sourceTree = "<group>";
+		};
+		243E267C276F9D8000A06DF9 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				243E267D276F9D8000A06DF9 /* PlayViewController.swift */,
+				243E267E276F9D8000A06DF9 /* Investigator */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		243E267E276F9D8000A06DF9 /* Investigator */ = {
+			isa = PBXGroup;
+			children = (
+				243E267F276F9D8000A06DF9 /* DanetkaViewController.swift */,
+				243E2680276F9D8000A06DF9 /* DanetkasCollectionViewCell.xib */,
+				243E2681276F9D8000A06DF9 /* DanetkasCollectionViewCell.swift */,
+			);
+			path = Investigator;
+			sourceTree = "<group>";
+		};
+		243E2682276F9D8000A06DF9 /* CustomCellViews */ = {
+			isa = PBXGroup;
+			children = (
+				243E2683276F9D8000A06DF9 /* MyDanetkasTableViewCell.xib */,
+				243E2684276F9D8000A06DF9 /* MyDanetkasTableViewCell.swift */,
+				243E2685276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.xib */,
+				243E2686276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.xib */,
+				243E2687276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.swift */,
+				243E2688276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.swift */,
+				243E2689276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.xib */,
+				243E268A276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.swift */,
+			);
+			path = CustomCellViews;
+			sourceTree = "<group>";
+		};
+		243E268B276F9D8000A06DF9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				243E268C276F9D8000A06DF9 /* ViewModel */,
+				243E2691276F9D8000A06DF9 /* Storyboard */,
+				243E2693276F9D8000A06DF9 /* Controllers */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		243E268C276F9D8000A06DF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				243E268D276F9D8000A06DF9 /* Signup */,
+				243E268F276F9D8000A06DF9 /* Login */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		243E268D276F9D8000A06DF9 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				243E268E276F9D8000A06DF9 /* SignupViewModel.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		243E268F276F9D8000A06DF9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				243E2690276F9D8000A06DF9 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		243E2691276F9D8000A06DF9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				243E2692276F9D8000A06DF9 /* Authentication.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		243E2693276F9D8000A06DF9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				243E2694276F9D8000A06DF9 /* Signup */,
+				243E2696276F9D8000A06DF9 /* Login */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		243E2694276F9D8000A06DF9 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				243E2695276F9D8000A06DF9 /* SignUpViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		243E2696276F9D8000A06DF9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				243E2697276F9D8000A06DF9 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		243E26D0276F9D8A00A06DF9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				243E26D1276F9D8A00A06DF9 /* UIDevice+Extension.swift */,
+				243E26D2276F9D8A00A06DF9 /* UIColor+Extension.swift */,
+				243E26D3276F9D8A00A06DF9 /* UIView+Extension.swift */,
+				243E26D4276F9D8A00A06DF9 /* String+Extension.swift */,
+				243E26D5276F9D8A00A06DF9 /* ViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		243E26DB276F9D9200A06DF9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				243E26DC276F9D9200A06DF9 /* APIHelper */,
+				243E26DE276F9D9200A06DF9 /* Constants */,
+				243E26E2276F9D9200A06DF9 /* BaseController */,
+				243E26E4276F9D9200A06DF9 /* HelperClass */,
+				243E26E6276F9D9200A06DF9 /* KeychainForApple */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		243E26DC276F9D9200A06DF9 /* APIHelper */ = {
+			isa = PBXGroup;
+			children = (
+				243E26DD276F9D9200A06DF9 /* APIBaseManager.swift */,
+			);
+			path = APIHelper;
+			sourceTree = "<group>";
+		};
+		243E26DE276F9D9200A06DF9 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				243E26DF276F9D9200A06DF9 /* Constants.swift */,
+				243E26E0276F9D9200A06DF9 /* DataManager */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		243E26E0276F9D9200A06DF9 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				243E26E1276F9D9200A06DF9 /* Utility.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		243E26E2276F9D9200A06DF9 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				243E26E3276F9D9200A06DF9 /* BaseViewController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		243E26E4276F9D9200A06DF9 /* HelperClass */ = {
+			isa = PBXGroup;
+			children = (
+				243E26E5276F9D9200A06DF9 /* DanetkasHelper.swift */,
+			);
+			path = HelperClass;
+			sourceTree = "<group>";
+		};
+		243E26E6276F9D9200A06DF9 /* KeychainForApple */ = {
+			isa = PBXGroup;
+			children = (
+				243E26E7276F9D9200A06DF9 /* KeychainItem.swift */,
+			);
+			path = KeychainForApple;
+			sourceTree = "<group>";
+		};
+		243E26EE276F9DA100A06DF9 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				243E26EF276F9DA100A06DF9 /* TPKeyBoardAvoiding */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		243E26EF276F9DA100A06DF9 /* TPKeyBoardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				243E26F0276F9DA100A06DF9 /* TPKeyboardAvoidingScrollView.h */,
+				243E26F1276F9DA100A06DF9 /* UrbanPoint-Bridging-Header.h */,
+				243E26F2276F9DA100A06DF9 /* TPKeyboardAvoidingCollectionView.h */,
+				243E26F3276F9DA100A06DF9 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				243E26F4276F9DA100A06DF9 /* TPKeyboardAvoidingTableView.m */,
+				243E26F5276F9DA100A06DF9 /* TPKeyboardAvoidingScrollView.m */,
+				243E26F6276F9DA100A06DF9 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				243E26F7276F9DA100A06DF9 /* TPKeyboardAvoidingCollectionView.m */,
+				243E26F8276F9DA100A06DF9 /* TPKeyboardAvoidingTableView.h */,
+			);
+			path = TPKeyBoardAvoiding;
+			sourceTree = "<group>";
+		};
+		243E26FD276F9DB900A06DF9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				243E26FE276F9DB900A06DF9 /* AppAssets */,
+				243E2700276F9DB900A06DF9 /* Colors */,
+				243E2702276F9DB900A06DF9 /* fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		243E26FE276F9DB900A06DF9 /* AppAssets */ = {
+			isa = PBXGroup;
+			children = (
+				243E26FF276F9DB900A06DF9 /* Assets.xcassets */,
+			);
+			path = AppAssets;
+			sourceTree = "<group>";
+		};
+		243E2700276F9DB900A06DF9 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				243E2701276F9DB900A06DF9 /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		243E2702276F9DB900A06DF9 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				243E2703276F9DB900A06DF9 /* Roboto-Medium.ttf */,
+				243E2704276F9DB900A06DF9 /* Roboto-Light.ttf */,
+				243E2705276F9DB900A06DF9 /* Poppins-ExtraLight.ttf */,
+				243E2706276F9DB900A06DF9 /* Poppins-ThinItalic.ttf */,
+				243E2707276F9DB900A06DF9 /* Poppins-ExtraLightItalic.ttf */,
+				243E2708276F9DB900A06DF9 /* Poppins-BoldItalic.ttf */,
+				243E2709276F9DB900A06DF9 /* Poppins-Light.ttf */,
+				243E270A276F9DB900A06DF9 /* Poppins-Medium.ttf */,
+				243E270B276F9DB900A06DF9 /* Roboto-Regular.ttf */,
+				243E270C276F9DB900A06DF9 /* Roboto-MediumItalic.ttf */,
+				243E270D276F9DB900A06DF9 /* Poppins-SemiBoldItalic.ttf */,
+				243E270E276F9DB900A06DF9 /* Poppins-ExtraBoldItalic.ttf */,
+				243E270F276F9DB900A06DF9 /* Poppins-ExtraBold.ttf */,
+				243E2710276F9DB900A06DF9 /* Poppins-BlackItalic.ttf */,
+				243E2711276F9DB900A06DF9 /* Roboto-ThinItalic.ttf */,
+				243E2712276F9DB900A06DF9 /* Roboto-BoldItalic.ttf */,
+				243E2713276F9DB900A06DF9 /* Poppins-Regular.ttf */,
+				243E2714276F9DB900A06DF9 /* Roboto-LightItalic.ttf */,
+				243E2715276F9DB900A06DF9 /* Poppins-LightItalic.ttf */,
+				243E2716276F9DB900A06DF9 /* Roboto-Italic.ttf */,
+				243E2717276F9DB900A06DF9 /* Poppins-Bold.ttf */,
+				243E2718276F9DB900A06DF9 /* Roboto-BlackItalic.ttf */,
+				243E2719276F9DB900A06DF9 /* Poppins-Black.ttf */,
+				243E271A276F9DB900A06DF9 /* Roboto-Bold.ttf */,
+				243E271B276F9DB900A06DF9 /* Roboto-Thin.ttf */,
+				243E271C276F9DB900A06DF9 /* Roboto-Black.ttf */,
+				243E271D276F9DB900A06DF9 /* Poppins-Thin.ttf */,
+				243E271E276F9DB900A06DF9 /* Poppins-SemiBold.ttf */,
+				243E271F276F9DB900A06DF9 /* Aladin-Regular.ttf */,
+				243E2720276F9DB900A06DF9 /* Poppins-Italic.ttf */,
+				243E2721276F9DB900A06DF9 /* Poppins-MediumItalic.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		243E2743276F9DC300A06DF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				243E2744276F9DC300A06DF9 /* GameUser.swift */,
+				243E2745276F9DC300A06DF9 /* Danetka.swift */,
+				243E2746276F9DC300A06DF9 /* Pagination.swift */,
+				243E2747276F9DC300A06DF9 /* APIResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		243E274C276F9E3C00A06DF9 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				243E2616276F966A00A06DF9 /* AppDelegate.swift */,
+				243E2618276F966A00A06DF9 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		243E274D276F9E6600A06DF9 /* PlistFile */ = {
+			isa = PBXGroup;
+			children = (
+				243E2624276F966D00A06DF9 /* Info.plist */,
+			);
+			path = PlistFile;
+			sourceTree = "<group>";
+		};
+		73ABF405581EF7B6F9630F02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				694C28655339BD8CA44A2691 /* Pods_DanetkasGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE723E300CC6D346CB03B9B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71BF1519304C11AA58D2BF4F /* Pods-DanetkasGame.debug.xcconfig */,
+				853E0243DC2E6C7E0B2655AA /* Pods-DanetkasGame.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +995,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 243E2627276F966D00A06DF9 /* Build configuration list for PBXNativeTarget "DanetkasGame" */;
 			buildPhases = (
+				659EE0DA987A949DAABF2BDC /* [CP] Check Pods Manifest.lock */,
 				243E260F276F966A00A06DF9 /* Sources */,
 				243E2610276F966A00A06DF9 /* Frameworks */,
 				243E2611276F966A00A06DF9 /* Resources */,
+				EFB53E921FAD3B6A646F60CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DanetkasGame;
+			packageProductDependencies = (
+				24E53A1D278F1BFB008C66FE /* FacebookLogin */,
+				24E53A1F278F1BFB008C66FE /* FacebookShare */,
+			);
 			productName = DanetkasGame;
 			productReference = 243E2613276F966A00A06DF9 /* DanetkasGame.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +1038,9 @@
 				Base,
 			);
 			mainGroup = 243E260A276F966A00A06DF9;
+			packageReferences = (
+				24E53A1C278F1BFB008C66FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 243E2614276F966A00A06DF9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,35 +1056,176 @@
 			buildActionMask = 2147483647;
 			files = (
 				243E2623276F966D00A06DF9 /* LaunchScreen.storyboard in Resources */,
-				243E2620276F966D00A06DF9 /* Assets.xcassets in Resources */,
-				243E261E276F966A00A06DF9 /* Main.storyboard in Resources */,
+				243E2736276F9DB900A06DF9 /* Poppins-LightItalic.ttf in Resources */,
+				243E272E276F9DB900A06DF9 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				243E272B276F9DB900A06DF9 /* Poppins-Medium.ttf in Resources */,
+				243E26C6276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.xib in Resources */,
+				243E2722276F9DB900A06DF9 /* Assets.xcassets in Resources */,
+				243E272C276F9DB900A06DF9 /* Roboto-Regular.ttf in Resources */,
+				243E273C276F9DB900A06DF9 /* Roboto-Thin.ttf in Resources */,
+				243E2730276F9DB900A06DF9 /* Poppins-ExtraBold.ttf in Resources */,
+				243E26B3276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.xib in Resources */,
+				243E273A276F9DB900A06DF9 /* Poppins-Black.ttf in Resources */,
+				243E272F276F9DB900A06DF9 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				243E2732276F9DB900A06DF9 /* Roboto-ThinItalic.ttf in Resources */,
+				243E2723276F9DB900A06DF9 /* Colors.xcassets in Resources */,
+				243E26A2276F9D8000A06DF9 /* Payment.storyboard in Resources */,
+				243E26C1276F9D8000A06DF9 /* DanetkasCollectionViewCell.xib in Resources */,
+				243E26BC276F9D8000A06DF9 /* Play.storyboard in Resources */,
+				243E2741276F9DB900A06DF9 /* Poppins-Italic.ttf in Resources */,
+				243E2727276F9DB900A06DF9 /* Poppins-ThinItalic.ttf in Resources */,
+				243E272A276F9DB900A06DF9 /* Poppins-Light.ttf in Resources */,
+				243E273F276F9DB900A06DF9 /* Poppins-SemiBold.ttf in Resources */,
+				243E273D276F9DB900A06DF9 /* Roboto-Black.ttf in Resources */,
+				243E2733276F9DB900A06DF9 /* Roboto-BoldItalic.ttf in Resources */,
+				243E26A6276F9D8000A06DF9 /* Profile.storyboard in Resources */,
+				243E2726276F9DB900A06DF9 /* Poppins-ExtraLight.ttf in Resources */,
+				243E272D276F9DB900A06DF9 /* Roboto-MediumItalic.ttf in Resources */,
+				243E2742276F9DB900A06DF9 /* Poppins-MediumItalic.ttf in Resources */,
+				243E2731276F9DB900A06DF9 /* Poppins-BlackItalic.ttf in Resources */,
+				243E26CD276F9D8000A06DF9 /* Authentication.storyboard in Resources */,
+				243E273B276F9DB900A06DF9 /* Roboto-Bold.ttf in Resources */,
+				243E26C3276F9D8000A06DF9 /* MyDanetkasTableViewCell.xib in Resources */,
+				243E2729276F9DB900A06DF9 /* Poppins-BoldItalic.ttf in Resources */,
+				243E26B4276F9D8000A06DF9 /* Dashboard.storyboard in Resources */,
+				243E2725276F9DB900A06DF9 /* Roboto-Light.ttf in Resources */,
+				243E2734276F9DB900A06DF9 /* Poppins-Regular.ttf in Resources */,
+				243E26AD276F9D8000A06DF9 /* RulesCollectionViewCell.xib in Resources */,
+				243E2739276F9DB900A06DF9 /* Roboto-BlackItalic.ttf in Resources */,
+				243E273E276F9DB900A06DF9 /* Poppins-Thin.ttf in Resources */,
+				243E26AE276F9D8000A06DF9 /* ChallengeCollectionViewCell.xib in Resources */,
+				243E2740276F9DB900A06DF9 /* Aladin-Regular.ttf in Resources */,
+				243E26C9276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.xib in Resources */,
+				243E2724276F9DB900A06DF9 /* Roboto-Medium.ttf in Resources */,
+				243E26B0276F9D8000A06DF9 /* GamePlayCollectionViewCell.xib in Resources */,
+				243E2735276F9DB900A06DF9 /* Roboto-LightItalic.ttf in Resources */,
+				243E2728276F9DB900A06DF9 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				243E2737276F9DB900A06DF9 /* Roboto-Italic.ttf in Resources */,
+				243E269A276F9D8000A06DF9 /* Settings.storyboard in Resources */,
+				243E26C5276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.xib in Resources */,
+				243E2738276F9DB900A06DF9 /* Poppins-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		659EE0DA987A949DAABF2BDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DanetkasGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFB53E921FAD3B6A646F60CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DanetkasGame/Pods-DanetkasGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DanetkasGame/Pods-DanetkasGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DanetkasGame/Pods-DanetkasGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		243E260F276F966A00A06DF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				243E261B276F966A00A06DF9 /* ViewController.swift in Sources */,
+				243E26A9276F9D8000A06DF9 /* MainDashboardCollectionViewCell.swift in Sources */,
+				243E26A0276F9D8000A06DF9 /* LanguageViewController.swift in Sources */,
+				243E26A4276F9D8000A06DF9 /* CreditCardViewController.swift in Sources */,
+				243E26BF276F9D8000A06DF9 /* PlayViewController.swift in Sources */,
+				243E26CC276F9D8000A06DF9 /* LoginViewModel.swift in Sources */,
+				243E26C7276F9D8000A06DF9 /* MoreDanetkasCollectionViewCell.swift in Sources */,
+				243E26B8276F9D8000A06DF9 /* RulesViewController.swift in Sources */,
+				243E26C8276F9D8000A06DF9 /* MakeMyDanetkaCollectionViewCell.swift in Sources */,
+				24A24BA32775055500C00746 /* LearnMoreViewController.swift in Sources */,
+				243E26FA276F9DA100A06DF9 /* TPKeyboardAvoidingTableView.m in Sources */,
+				243E26A1276F9D8000A06DF9 /* SettingsViewController.swift in Sources */,
+				243E26D8276F9D8A00A06DF9 /* UIView+Extension.swift in Sources */,
+				243E269E276F9D8000A06DF9 /* RatingViewController.swift in Sources */,
+				243E269F276F9D8000A06DF9 /* RatingTableViewCell.swift in Sources */,
+				243E26EB276F9D9200A06DF9 /* BaseViewController.swift in Sources */,
+				243E26FB276F9DA100A06DF9 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				243E26B2276F9D8000A06DF9 /* GamePlayCollectionViewCell.swift in Sources */,
+				243E26BE276F9D8000A06DF9 /* MyDanetkasViewController.swift in Sources */,
+				243E26B7276F9D8000A06DF9 /* DictionaryViewController.swift in Sources */,
+				243E26A8276F9D8000A06DF9 /* DictionaryViewModel.swift in Sources */,
+				243E26B5276F9D8000A06DF9 /* What'sDanetkasViewController.swift in Sources */,
+				243E26BB276F9D8000A06DF9 /* PlayViewModel.swift in Sources */,
+				243E26C2276F9D8000A06DF9 /* DanetkasCollectionViewCell.swift in Sources */,
+				243E26A5276F9D8000A06DF9 /* ProfileViewModel.swift in Sources */,
+				243E26AB276F9D8000A06DF9 /* RulesSuperCollectionViewCell.swift in Sources */,
+				243E26BA276F9D8000A06DF9 /* DanetkasCellViewModel.swift in Sources */,
+				24A24BA527751B9F00C00746 /* AnswerDanetkasViewController.swift in Sources */,
+				247849C5278C922D00C593FE /* BundleDiscountViewController.swift in Sources */,
+				243E26CA276F9D8000A06DF9 /* MyDanetkasCollectionViewCell.swift in Sources */,
+				243E26AC276F9D8000A06DF9 /* RulesCollectionViewCell.swift in Sources */,
+				243E2748276F9DC300A06DF9 /* GameUser.swift in Sources */,
+				243E26ED276F9D9200A06DF9 /* KeychainItem.swift in Sources */,
+				243E26E9276F9D9200A06DF9 /* Constants.swift in Sources */,
+				243E2699276F9D8000A06DF9 /* RatingViewModel.swift in Sources */,
+				243E2749276F9DC300A06DF9 /* Danetka.swift in Sources */,
+				243E26D6276F9D8A00A06DF9 /* UIDevice+Extension.swift in Sources */,
+				243E26B6276F9D8000A06DF9 /* MainDashboardViewController.swift in Sources */,
+				243E26B1276F9D8000A06DF9 /* ChallengeCollectionViewCell.swift in Sources */,
+				243E26EC276F9D9200A06DF9 /* DanetkasHelper.swift in Sources */,
+				243E26CB276F9D8000A06DF9 /* SignupViewModel.swift in Sources */,
+				243E26FC276F9DA100A06DF9 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				243E269C276F9D8000A06DF9 /* FAQTableViewCell.swift in Sources */,
+				243E26C0276F9D8000A06DF9 /* DanetkaViewController.swift in Sources */,
+				243E26DA276F9D8A00A06DF9 /* ViewController+Extension.swift in Sources */,
+				243E26E8276F9D9200A06DF9 /* APIBaseManager.swift in Sources */,
+				243E26BD276F9D8000A06DF9 /* MenuCollectionViewCell.swift in Sources */,
+				243E26AF276F9D8000A06DF9 /* ExtraRulesCollectionViewCell.swift in Sources */,
+				243E26A3276F9D8000A06DF9 /* PaymentViewController.swift in Sources */,
+				243E26C4276F9D8000A06DF9 /* MyDanetkasTableViewCell.swift in Sources */,
+				243E26CF276F9D8000A06DF9 /* LoginViewController.swift in Sources */,
 				243E2617276F966A00A06DF9 /* AppDelegate.swift in Sources */,
+				243E274B276F9DC300A06DF9 /* APIResponse.swift in Sources */,
+				243E269D276F9D8000A06DF9 /* FAQViewController.swift in Sources */,
+				243E26D9276F9D8A00A06DF9 /* String+Extension.swift in Sources */,
+				243E26CE276F9D8000A06DF9 /* SignUpViewController.swift in Sources */,
+				243E26D7276F9D8A00A06DF9 /* UIColor+Extension.swift in Sources */,
+				243E26A7276F9D8000A06DF9 /* ProfileViewController.swift in Sources */,
+				243E26F9276F9DA100A06DF9 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				243E274A276F9DC300A06DF9 /* Pagination.swift in Sources */,
 				243E2619276F966A00A06DF9 /* SceneDelegate.swift in Sources */,
+				243E26B9276F9D8000A06DF9 /* DanetkasViewModel.swift in Sources */,
+				243E269B276F9D8000A06DF9 /* ContactViewController.swift in Sources */,
+				243E26AA276F9D8000A06DF9 /* DictionaryTableViewCell.swift in Sources */,
+				243E26EA276F9D9200A06DF9 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		243E261C276F966A00A06DF9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				243E261D276F966A00A06DF9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		243E2621276F966D00A06DF9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,25 +1355,29 @@
 		};
 		243E2628276F966D00A06DF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71BF1519304C11AA58D2BF4F /* Pods-DanetkasGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DanetkasGame/DanetkasGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8AU3CVVQTV;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 724979MRS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DanetkasGame/Info.plist;
+				INFOPLIST_FILE = DanetkasGame/PlistFile/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Dashboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MurtazaMehmood.DanetkasGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.armoomragames.denketa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -312,25 +1387,29 @@
 		};
 		243E2629276F966D00A06DF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853E0243DC2E6C7E0B2655AA /* Pods-DanetkasGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DanetkasGame/DanetkasGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8AU3CVVQTV;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 724979MRS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DanetkasGame/Info.plist;
+				INFOPLIST_FILE = DanetkasGame/PlistFile/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Dashboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MurtazaMehmood.DanetkasGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.armoomragames.denketa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,6 +1439,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24E53A1C278F1BFB008C66FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24E53A1D278F1BFB008C66FE /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24E53A1C278F1BFB008C66FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		24E53A1F278F1BFB008C66FE /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24E53A1C278F1BFB008C66FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 243E260B276F966A00A06DF9 /* Project object */;
 }

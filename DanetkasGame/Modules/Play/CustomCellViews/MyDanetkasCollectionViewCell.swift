@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MyDanetkasDelegate {
-    func didSelect(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    func didSelect(_ tableView: UITableView,index: Int?,didSelectRowAt indexPath: IndexPath, danetka: Danetka?)
 }
 
 class MyDanetkasCollectionViewCell: UICollectionViewCell {
@@ -21,6 +21,7 @@ class MyDanetkasCollectionViewCell: UICollectionViewCell {
     
     //MARK:- PROPERTIES
     var delegate: MyDanetkasDelegate?
+    var index: Int?
     class var identifier: String {
         return "MyDanetkasCollectionViewCell"
     }
@@ -65,6 +66,8 @@ extension MyDanetkasCollectionViewCell: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MyDanetkasTableViewCell.identifier, for: indexPath) as! MyDanetkasTableViewCell
         cell.danetka = self.danetkas?[indexPath.row]
+        cell.popularLabel.isHidden = true
+        cell.listButton.isHidden = false
         return cell
     }
     
@@ -73,7 +76,7 @@ extension MyDanetkasCollectionViewCell: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelect(tableView, didSelectRowAt: indexPath)
+        delegate?.didSelect(tableView,index: self.index,didSelectRowAt: indexPath, danetka: self.danetkas?[indexPath.row])
     }
     
     

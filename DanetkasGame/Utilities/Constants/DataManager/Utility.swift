@@ -13,8 +13,22 @@ class Utility: NSObject {
     
     var isInvestigator: Bool?
     var isMaster: Bool?
-    var isPlayAsGuest: Bool = false
+    var isPlayAsGuest: Bool? {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isPlayAsGuest")
+        } get {
+            UserDefaults.standard.value(forKey: "isPlayAsGuest") as? Bool
+        }
+    }
     var showRuleViewAgain: Bool = true
+    
+    var playRulePopUp: Bool? {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "playRulePopUp")
+        } get {
+            UserDefaults.standard.value(forKey: "playRulePopUp") as? Bool
+        }
+    }
     
     var user: GameUser? {
         get {

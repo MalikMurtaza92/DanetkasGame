@@ -12,6 +12,8 @@ class MyDanetkasTableViewCell: UITableViewCell {
     //MARK:- OUTLETS
     @IBOutlet weak var danetkaTitleLabel: UILabel!
     @IBOutlet weak var danetkaImageView: UIImageView!
+    @IBOutlet weak var popularLabel: UILabel!
+    @IBOutlet weak var listButton: UIButton!
     
     //MARK:- PROPERTIES
     class var identifier: String {
@@ -20,7 +22,7 @@ class MyDanetkasTableViewCell: UITableViewCell {
     
     var danetka: PlayViewModel.DanetkaModel? {
         didSet {
-            self.danetkaTitleLabel.text = danetka?.name ?? ""
+            self.danetkaTitleLabel.text = danetka?.title ?? ""
             self.danetkaImageView.loadImage(with: "\(Endpoint.baseURLImage)\(danetka?.image ?? "")")
         }
     }

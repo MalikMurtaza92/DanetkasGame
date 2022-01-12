@@ -41,13 +41,16 @@ class DanetkasViewModel {
     
     
     struct DanetkaListing: Danetka {
+        var answer: String?
         var id: Int?
-        var name: String?
+        var title: String?
         var hint: String?
         var image: String?
         var paymentStatus: String?
         var status: Bool?
         var updatedTime: Int?
+        var question: String?
+        var learnMore: String?
     }
     
 }

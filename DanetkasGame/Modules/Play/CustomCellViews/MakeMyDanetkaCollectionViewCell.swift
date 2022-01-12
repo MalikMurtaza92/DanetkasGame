@@ -7,6 +7,22 @@
 
 import UIKit
 
+protocol MakeMyDanetkaCollectionViewCellDelegate {
+    func openRiddleImage()
+    func openAnswerImage()
+    func submitDanetka(danetkas: MakeDanetka?)
+}
+
+struct MakeDanetka {
+    var title: String?
+    var answer: String?
+    var image: String?
+    var answerImage: String?
+    var hint: String?
+    var question: String?
+    var learnMore: String?
+}
+
 class MakeMyDanetkaCollectionViewCell: UICollectionViewCell {
     
     //MARK:- OUTLETS
@@ -17,11 +33,16 @@ class MakeMyDanetkaCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var indicatorView: UIView!
     
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var riddleTextView: UITextView!
+    @IBOutlet weak var answerTextView: UITextView!
     //MARK:- PROPERTIES
     class var identifier: String {
         return "MakeMyDanetkaCollectionViewCell"
     }
 
+    var delegate: MakeMyDanetkaCollectionViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -54,6 +75,18 @@ class MakeMyDanetkaCollectionViewCell: UICollectionViewCell {
         indicatorView.layer.cornerRadius = indicatorView.frame.height / 2
     }
 
+    @IBAction func submitButtonPressed(_ sender: UIButton) {
+        delegate?.submitDanetka(danetkas: MakeDanetka(title: "Murtaza's Danetka", answer: "Answer", image: nil, answerImage: nil, hint: "Hint", question: "Question", learnMore: "Lun-Aur"))
+    }
+    
+    @IBAction func addRiddleImageButtonPressed(_ sender: UIButton) {
+        delegate?.openRiddleImage()
+    }
+    
+    
+    @IBAction func addAnswerImageButtonPressed(_ sender: UIButton) {
+        delegate?.openAnswerImage()
+    }
 }
 
 //TEXTVIEW DELEGATE

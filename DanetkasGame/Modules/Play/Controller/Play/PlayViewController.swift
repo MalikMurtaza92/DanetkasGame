@@ -21,8 +21,10 @@ class PlayViewController: BaseViewController {
                                    "More Danetkas",
                                    "Make my Danetkas"]
     var selectedMenu: Int = 0
+    var isRiddleImage: Bool = false
+    var riddleImage: UIImage?
+    var answerImage: UIImage?
     
-    //MARK:- PROPERTIES
     var viewModel: PlayViewModel = PlayViewModel()
     
     override func viewDidLoad() {
@@ -55,21 +57,30 @@ class PlayViewController: BaseViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
-        fetchMyDanetkas()
+        if Utility.shared.user == nil {
+            fetchMyDanetkas()
+        } else {
+            fetchLoginMyDanetkas()
+        }
     }
     
     @IBAction func rulesButton(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3) {
             self.rulesView.isHidden = true
         }
+        
+        let VC = DanetkasHelper.getViewController(storyboard: .Play, identifier: .MyDanetkaVC)
+        self.present(to: VC, completion: nil)
     }
     
     @IBAction func showRuleViewAgain(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         if sender.isSelected {
             sender.setImage(UIImage(named: "selected"), for: .normal)
+            Utility.shared.playRulePopUp = true
         } else {
             sender.setImage(UIImage(named: "unselected"), for: .normal)
+            Utility.shared.playRulePopUp = false
         }
     }
     
@@ -80,6 +91,21 @@ class PlayViewController: BaseViewController {
         }
         showProgress()
         viewModel.fetchMyDanetkas { list, error in
+            self.hideProgress()
+            if error == nil {
+                self.menuListCollectionView.reloadData()
+            } else {
+                self.showSimpleAlert(title: Constant.title, message: error?.localizedDescription ?? "")
+            }
+        }
+    }
+    
+    func fetchLoginMyDanetkas() {
+        guard viewModel.loginDantkas == nil || viewModel.loginDantkas?.count == 0 else {
+            return
+        }
+        showProgress()
+        viewModel.fetchLoginMyDanetkas { list, error in
             self.hideProgress()
             if error == nil {
                 self.menuListCollectionView.reloadData()
@@ -131,17 +157,18 @@ extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyDanetkasCollectionViewCell.identifier, for: indexPath) as! MyDanetkasCollectionViewCell
                 cell.delegate = self
                 cell.danetkas = viewModel.danetkas
+                cell.index = indexPath.row
                 return cell
             } else if indexPath.row == 1 {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoreDanetkasCollectionViewCell.identifier, for: indexPath) as! MoreDanetkasCollectionViewCell
                 cell.delegate = self
                 cell.danetkas = viewModel.moreDanetkas
-
+                cell.index = indexPath.row
                 return cell
             }
 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MakeMyDanetkaCollectionViewCell.identifier, for: indexPath) as! MakeMyDanetkaCollectionViewCell
-
+            cell.delegate = self
             return cell
         }
     
@@ -181,15 +208,109 @@ extension PlayViewController: UICollectionViewDelegate, UICollectionViewDataSour
 //COLLECTIONVIEW DELEGATE
 extension PlayViewController: MyDanetkasDelegate {
     
-    func didSelect(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if Utility.shared.isPlayAsGuest {
+    func didSelect(_ tableView: UITableView,index: Int?,didSelectRowAt indexPath: IndexPath, danetka: Danetka?) {
+        if index == 0 {
+            if Utility.shared.isPlayAsGuest ?? false {
+                if Utility.shared.playRulePopUp ?? false {
+                    let VC = DanetkasHelper.getViewController(storyboard: .Play, identifier: .MyDanetkaVC) as! MyDanetkasViewController
+                    VC.isFromMyDanetkas = true
+                    VC.danetka = danetka
+                    self.present(to: VC, completion: nil)
+                } else {
+                    self.rulesView.isHidden = false
+                }
+                
+            } else if Utility.shared.user == nil {
+                self.showToastAlert(title: Constant.title, message: "Please SignIn / SignUp or play as Guest")
+            } else {
+                let VC = DanetkasHelper.getViewController(storyboard: .Play, identifier: .MyDanetkaVC)
+                self.present(to: VC, completion: nil)
+            }
+        } else {
+            if Utility.shared.user == nil {
+                self.showToastAlert(title: Constant.title, message: "Please SignIn / SignUp or play as Guest")
+            } else {
+                let VC = DanetkasHelper.getViewController(storyboard: .Play, identifier: .MyDanetkaVC) as! MyDanetkasViewController
+                VC.danetka = danetka
+                self.present(to: VC, completion: nil)
+            }
+        }
+    }
+    
+}
+
+//MARK: - MAKE MY DANETKAS DELEGATE
+extension PlayViewController: MakeMyDanetkaCollectionViewCellDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func getImage(){
+        let alert = UIAlertController(title: "Select option", message: nil, preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = true
+            imagePicker.delegate = self
+            self.present(imagePicker, animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Gallery", style:  .default, handler: { _ in
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.allowsEditing = true
+            imagePicker.delegate = self
+            self.present(imagePicker, animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func openRiddleImage() {
+        isRiddleImage = true
+        getImage()
+    }
+    
+    func openAnswerImage() {
+        isRiddleImage = false
+        getImage()
+    }
+    
+    func submitDanetka(danetkas: MakeDanetka?) {
+        
+        if Utility.shared.isPlayAsGuest ?? false {
             self.rulesView.isHidden = false
         } else if Utility.shared.user == nil {
             self.showToastAlert(title: Constant.title, message: "Please SignIn / SignUp or play as Guest")
         } else {
-            let VC = DanetkasHelper.getViewController(storyboard: .Play, identifier: .MyDanetkaVC)
-            self.present(to: VC, completion: nil)
+        
+        
+        print(Utility.shared.user?.id ?? 1)
+        let param = ["title":danetkas?.title ?? "",
+                     "answer":danetkas?.answer ?? "",
+                     "image":"image",
+                     "answerImage":"answerImage",
+                     "hint":"Hint",
+                     "question":"Question",
+                     "learnMore":"Learn More",
+                     "masterId":"87"]
+            viewModel.makeMyDanetka(parameter: param, images: [self.riddleImage!, self.answerImage!])
         }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            if isRiddleImage {
+                self.riddleImage = image
+            } else {
+                self.answerImage = image
+            }
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
     
 }

@@ -109,6 +109,51 @@ class HTTPService{
         }
     }
     
+    func postRequestWithMultipart(endpoint:URL, parameters: Parameters,header: HTTPHeaders?,images: [UIImage],completionHandler: @escaping completionHandler) {
+        AF.upload(multipartFormData: { (multipartFormData) in
+            
+            for (key, value) in parameters {
+                multipartFormData.append((value).data(using: String.Encoding.utf8)!, withName: key)
+            }
+            
+            for img in images {
+                guard let imgData = img.jpegData(compressionQuality: 1) else { return }
+                multipartFormData.append(imgData, withName: "image", fileName: DanetkasHelper.generateCurrentTimeStamp() + ".jpeg", mimeType: "image/jpeg")
+            }
+        },to: endpoint, usingThreshold: UInt64.init(),
+          method: .post,
+          headers: header).response{ response in
+            print("************POST-MULTIPART************")
+            print(endpoint.absoluteString)
+            print("HEADER: \(String(describing: header))")
+            print("BODY: \(String(describing: parameters))")
+            switch response.result{
+            
+            case .success(_):
+                if response.error == nil {
+                    print("---SUCCESS---")
+                    print(response.value)
+                    completionHandler(response.data,nil)
+                } else {
+                    print("---SUCCESS-ERROR---")
+                    print(response.error)
+                    print("ERROR CODE: \(response.error?.responseCode)")
+                    completionHandler(nil,response.error)
+                    completionHandler(response.data,nil)
+                }
+                
+                break
+            case .failure(let error):
+                print("---FAILURE---")
+                print(error)
+                print("ERROR CODE: \(error.responseCode)")
+                completionHandler(nil,error)
+                break
+            }
+            print("*************POST-MULTIPART-END**************")
+        }
+    }
+    
     fileprivate func decodeResponse<T: Codable>(data: Data?, error: Error,model: T.Type,completionHandler: @escaping responseHandler<T>) {
         if data != nil {
             let decoder = JSONDecoder()

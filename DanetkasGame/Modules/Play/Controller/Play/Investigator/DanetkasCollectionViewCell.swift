@@ -28,7 +28,7 @@ class DanetkasCollectionViewCell: UICollectionViewCell {
     
     var model: DanetkasCellViewModel? {
         didSet {
-            titleLabel.text = model?.Danetkas?.name ?? ""
+            titleLabel.text = model?.Danetkas?.title ?? ""
             danetkasImageView.loadImage(with: "\(Endpoint.baseURLImage)\(model?.Danetkas?.image ?? "")")
             self.indexPath = model?.indexPath
         }

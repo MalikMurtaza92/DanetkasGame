@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,7 +23,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MakeMyDanetkaCollectionViewCell" customModule="DanetkasGameApp" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MakeMyDanetkaCollectionViewCell" customModule="DanetkasGame" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="363" height="1283"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="363" height="1283"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxg-99-xI6">
-                                <rect key="frame" x="0.0" y="0.0" width="363" height="1246"/>
+                                <rect key="frame" x="0.0" y="0.0" width="363" height="1138"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdF-uJ-hfW">
                                         <rect key="frame" x="242" y="0.0" width="109" height="4"/>
@@ -44,13 +44,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7po-n0-ivE">
-                                        <rect key="frame" x="28" y="8" width="71.5" height="37.5"/>
+                                        <rect key="frame" x="28" y="8" width="88" height="45"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                         <color key="textColor" name="DanetkasRed"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3r-dg-hgY">
-                                        <rect key="frame" x="28" y="75.5" width="307" height="41"/>
+                                        <rect key="frame" x="28" y="73" width="307" height="41"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rrl-xn-Xx5">
                                                 <rect key="frame" x="18" y="5" width="271" height="31"/>
@@ -68,13 +68,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riddle*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOK-kp-vWF">
-                                        <rect key="frame" x="28" y="166.5" width="103" height="37.5"/>
+                                        <rect key="frame" x="28" y="144" width="120" height="45"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                         <color key="textColor" name="DanetkasRed"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A71-0V-csM">
-                                        <rect key="frame" x="28" y="222" width="307" height="150"/>
+                                        <rect key="frame" x="28" y="204" width="307" height="150"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yag-MD-Fnd">
                                                 <rect key="frame" x="16" y="16" width="275" height="118"/>
@@ -94,13 +94,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izU-ae-hOp">
-                                        <rect key="frame" x="28" y="422" width="199" height="37.5"/>
+                                        <rect key="frame" x="28" y="384" width="230.5" height="45"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                         <color key="textColor" name="DanetkasRed"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73n-Tx-zdY">
-                                        <rect key="frame" x="28" y="489.5" width="135.5" height="47"/>
+                                        <rect key="frame" x="28" y="444" width="138" height="47"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coolicon" translatesAutoresizingMaskIntoConstraints="NO" id="NzH-GQ-L3T">
                                                 <rect key="frame" x="17" y="8.5" width="30" height="30"/>
@@ -110,13 +110,16 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvY-yE-vPQ">
-                                                <rect key="frame" x="58" y="9" width="62.5" height="29.5"/>
+                                                <rect key="frame" x="58" y="9" width="65" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                                 <color key="textColor" name="DanetkasRed"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aoa-YJ-Ben">
-                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="47"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="47"/>
+                                                <connections>
+                                                    <action selector="addRiddleImageButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="r2C-b2-2aJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -134,13 +137,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIF-Bp-h9O">
-                                        <rect key="frame" x="28" y="586.5" width="118" height="37.5"/>
+                                        <rect key="frame" x="28" y="521" width="141.5" height="45"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                         <color key="textColor" name="DanetkasRed"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sv1-Ne-oaf">
-                                        <rect key="frame" x="28" y="654" width="307" height="150"/>
+                                        <rect key="frame" x="28" y="581" width="307" height="150"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aSf-4v-ZGY">
                                                 <rect key="frame" x="16" y="16" width="275" height="118"/>
@@ -160,13 +163,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6L-XT-tdA">
-                                        <rect key="frame" x="28" y="854" width="199" height="37.5"/>
+                                        <rect key="frame" x="28" y="761" width="230.5" height="45"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                         <color key="textColor" name="DanetkasRed"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86k-Z2-lf6">
-                                        <rect key="frame" x="28" y="921.5" width="135.5" height="47"/>
+                                        <rect key="frame" x="28" y="821" width="138" height="47"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coolicon" translatesAutoresizingMaskIntoConstraints="NO" id="GiJ-Lp-SPG">
                                                 <rect key="frame" x="17" y="8.5" width="30" height="30"/>
@@ -176,13 +179,16 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLz-mC-6Oi">
-                                                <rect key="frame" x="58" y="9" width="62.5" height="29.5"/>
+                                                <rect key="frame" x="58" y="9" width="65" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                                 <color key="textColor" name="DanetkasRed"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-ej-gfo">
-                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="47"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="47"/>
+                                                <connections>
+                                                    <action selector="addAnswerImageButtonPressed:" destination="gTV-IL-0wX" eventType="touchDragInside" id="Elg-cb-AdW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -200,7 +206,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJo-o8-rB2">
-                                        <rect key="frame" x="28" y="1070" width="30" height="30"/>
+                                        <rect key="frame" x="28" y="962" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="XbP-Yf-BaL"/>
                                             <constraint firstAttribute="height" constant="30" id="wPx-0y-PKj"/>
@@ -208,7 +214,7 @@
                                         <state key="normal" title="Button" image="plus"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIQ-Q2-Tcz">
-                                        <rect key="frame" x="95.5" y="1140" width="172" height="47"/>
+                                        <rect key="frame" x="95.5" y="1032" width="172" height="47"/>
                                         <color key="backgroundColor" name="DanetkasBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="172" id="Nrf-RB-Jfy"/>
@@ -218,9 +224,12 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ATD-lX-OWe"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-Jl-7JS">
-                                        <rect key="frame" x="28" y="1002.5" width="199" height="37.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an Rigoletto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-Jl-7JS">
+                                        <rect key="frame" x="28" y="902" width="272" height="45"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                         <color key="textColor" name="DanetkasRed"/>
                                         <nil key="highlightedColor"/>
@@ -230,34 +239,34 @@
                                 <constraints>
                                     <constraint firstItem="A71-0V-csM" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="1am-g7-RlR"/>
                                     <constraint firstItem="86k-Z2-lf6" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="3y6-bL-szW"/>
-                                    <constraint firstItem="86k-Z2-lf6" firstAttribute="top" secondItem="h6L-XT-tdA" secondAttribute="bottom" constant="30" id="5di-Xe-jEq"/>
-                                    <constraint firstItem="k3r-dg-hgY" firstAttribute="top" secondItem="7po-n0-ivE" secondAttribute="bottom" constant="30" id="6cV-ZN-P2d"/>
+                                    <constraint firstItem="86k-Z2-lf6" firstAttribute="top" secondItem="h6L-XT-tdA" secondAttribute="bottom" constant="15" id="5di-Xe-jEq"/>
+                                    <constraint firstItem="k3r-dg-hgY" firstAttribute="top" secondItem="7po-n0-ivE" secondAttribute="bottom" constant="20" id="6cV-ZN-P2d"/>
                                     <constraint firstItem="73n-Tx-zdY" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="Bij-hM-mKz"/>
                                     <constraint firstItem="sv1-Ne-oaf" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="Eci-HE-0Vb"/>
-                                    <constraint firstItem="jIF-Bp-h9O" firstAttribute="top" secondItem="73n-Tx-zdY" secondAttribute="bottom" constant="50" id="IT6-qZ-DzR"/>
+                                    <constraint firstItem="jIF-Bp-h9O" firstAttribute="top" secondItem="73n-Tx-zdY" secondAttribute="bottom" constant="30" id="IT6-qZ-DzR"/>
                                     <constraint firstItem="6Rh-Jl-7JS" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="Iv5-Rd-3nR"/>
                                     <constraint firstItem="jIF-Bp-h9O" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="JYL-bC-WWj"/>
-                                    <constraint firstItem="izU-ae-hOp" firstAttribute="top" secondItem="A71-0V-csM" secondAttribute="bottom" constant="50" id="LUY-gP-ZgM"/>
+                                    <constraint firstItem="izU-ae-hOp" firstAttribute="top" secondItem="A71-0V-csM" secondAttribute="bottom" constant="30" id="LUY-gP-ZgM"/>
                                     <constraint firstItem="tdF-uJ-hfW" firstAttribute="top" secondItem="uxg-99-xI6" secondAttribute="top" id="MfX-Aq-79a"/>
                                     <constraint firstItem="k3r-dg-hgY" firstAttribute="leading" secondItem="uxg-99-xI6" secondAttribute="leading" constant="28" id="MhT-aC-JtT"/>
-                                    <constraint firstItem="h6L-XT-tdA" firstAttribute="top" secondItem="sv1-Ne-oaf" secondAttribute="bottom" constant="50" id="Mrm-LQ-OZ0"/>
-                                    <constraint firstItem="cJo-o8-rB2" firstAttribute="top" secondItem="6Rh-Jl-7JS" secondAttribute="bottom" constant="30" id="Rrv-G5-P7L"/>
+                                    <constraint firstItem="h6L-XT-tdA" firstAttribute="top" secondItem="sv1-Ne-oaf" secondAttribute="bottom" constant="30" id="Mrm-LQ-OZ0"/>
+                                    <constraint firstItem="cJo-o8-rB2" firstAttribute="top" secondItem="6Rh-Jl-7JS" secondAttribute="bottom" constant="15" id="Rrv-G5-P7L"/>
                                     <constraint firstAttribute="trailing" secondItem="k3r-dg-hgY" secondAttribute="trailing" constant="28" id="Una-um-kCH"/>
                                     <constraint firstItem="sv1-Ne-oaf" firstAttribute="trailing" secondItem="k3r-dg-hgY" secondAttribute="trailing" id="YGE-kR-M36"/>
                                     <constraint firstItem="k3r-dg-hgY" firstAttribute="leading" secondItem="7po-n0-ivE" secondAttribute="leading" id="YhX-ML-J94"/>
-                                    <constraint firstItem="iIQ-Q2-Tcz" firstAttribute="top" secondItem="6Rh-Jl-7JS" secondAttribute="bottom" constant="100" id="ZaG-s8-7CZ"/>
+                                    <constraint firstItem="iIQ-Q2-Tcz" firstAttribute="top" secondItem="6Rh-Jl-7JS" secondAttribute="bottom" constant="85" id="ZaG-s8-7CZ"/>
                                     <constraint firstAttribute="trailing" secondItem="tdF-uJ-hfW" secondAttribute="trailing" constant="12" id="dWQ-1Y-F3A"/>
                                     <constraint firstItem="aOK-kp-vWF" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="fs8-W1-h9j"/>
                                     <constraint firstItem="7po-n0-ivE" firstAttribute="top" secondItem="uxg-99-xI6" secondAttribute="top" constant="8" id="g0o-QB-BTD"/>
-                                    <constraint firstItem="A71-0V-csM" firstAttribute="top" secondItem="aOK-kp-vWF" secondAttribute="bottom" constant="18" id="lQw-Fo-TeG"/>
+                                    <constraint firstItem="A71-0V-csM" firstAttribute="top" secondItem="aOK-kp-vWF" secondAttribute="bottom" constant="15" id="lQw-Fo-TeG"/>
                                     <constraint firstItem="h6L-XT-tdA" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="mDR-GJ-oop"/>
-                                    <constraint firstItem="aOK-kp-vWF" firstAttribute="top" secondItem="k3r-dg-hgY" secondAttribute="bottom" constant="50" id="mHO-Y8-7mS"/>
+                                    <constraint firstItem="aOK-kp-vWF" firstAttribute="top" secondItem="k3r-dg-hgY" secondAttribute="bottom" constant="30" id="mHO-Y8-7mS"/>
                                     <constraint firstItem="6Rh-Jl-7JS" firstAttribute="top" secondItem="86k-Z2-lf6" secondAttribute="bottom" constant="34" id="rD4-I2-ezx"/>
-                                    <constraint firstItem="sv1-Ne-oaf" firstAttribute="top" secondItem="jIF-Bp-h9O" secondAttribute="bottom" constant="30" id="tNZ-aL-Iv7"/>
+                                    <constraint firstItem="sv1-Ne-oaf" firstAttribute="top" secondItem="jIF-Bp-h9O" secondAttribute="bottom" constant="15" id="tNZ-aL-Iv7"/>
                                     <constraint firstItem="izU-ae-hOp" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="tja-yj-51Q"/>
                                     <constraint firstItem="cJo-o8-rB2" firstAttribute="leading" secondItem="k3r-dg-hgY" secondAttribute="leading" id="txs-K2-1ba"/>
                                     <constraint firstItem="A71-0V-csM" firstAttribute="trailing" secondItem="k3r-dg-hgY" secondAttribute="trailing" id="tz8-UX-85k"/>
-                                    <constraint firstItem="73n-Tx-zdY" firstAttribute="top" secondItem="izU-ae-hOp" secondAttribute="bottom" constant="30" id="uPL-Kh-8cq"/>
+                                    <constraint firstItem="73n-Tx-zdY" firstAttribute="top" secondItem="izU-ae-hOp" secondAttribute="bottom" constant="15" id="uPL-Kh-8cq"/>
                                     <constraint firstItem="iIQ-Q2-Tcz" firstAttribute="centerX" secondItem="uxg-99-xI6" secondAttribute="centerX" id="uPO-2p-9Y2"/>
                                     <constraint firstAttribute="bottom" secondItem="iIQ-Q2-Tcz" secondAttribute="bottom" constant="59" id="x9f-eP-GIY"/>
                                     <constraint firstItem="tdF-uJ-hfW" firstAttribute="width" secondItem="uxg-99-xI6" secondAttribute="width" multiplier="0.3" id="z7Y-py-m7p"/>
@@ -283,9 +292,12 @@
             </constraints>
             <size key="customSize" width="363" height="511"/>
             <connections>
+                <outlet property="answerTextView" destination="aSf-4v-ZGY" id="fhO-j1-4eZ"/>
                 <outlet property="indicatorView" destination="tdF-uJ-hfW" id="DLr-5O-Nbw"/>
+                <outlet property="riddleTextView" destination="Yag-MD-Fnd" id="K2t-gK-EWb"/>
                 <outlet property="searchView" destination="k3r-dg-hgY" id="Exl-ib-paC"/>
                 <outlet property="submitButton" destination="iIQ-Q2-Tcz" id="cz0-xt-NQw"/>
+                <outlet property="titleTextField" destination="Rrl-xn-Xx5" id="8Rc-Xl-mJa"/>
                 <outletCollection property="inserButtonView" destination="73n-Tx-zdY" collectionClass="NSMutableArray" id="xJg-vh-L2S"/>
                 <outletCollection property="inserButtonView" destination="86k-Z2-lf6" collectionClass="NSMutableArray" id="6f0-Qk-Q96"/>
                 <outletCollection property="textView" destination="Yag-MD-Fnd" collectionClass="NSMutableArray" id="9g4-WY-dS7"/>

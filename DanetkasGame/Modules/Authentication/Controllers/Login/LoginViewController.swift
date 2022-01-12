@@ -84,7 +84,44 @@ class LoginViewController: BaseViewController {
             if (loginResult?.isCancelled ?? false){
                 print("Cancled")
             } else {
-                print("notCancled")
+                if AccessToken.isCurrentAccessTokenActive {
+                    
+                    GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email , gender"]).start { connection, result, error in
+                        if error == nil {
+                            
+                            let dictionay = result as? [String: Any]
+                            let name = dictionay!["name"] as! String
+                            let email = dictionay!["email"] as! String
+                            var user = GameUser()
+                            user.email = email
+                            user.name = name
+                            user.userType = "social"
+                            
+                            Utility.shared.user = user
+                            
+                            let params = ["email": user.email ?? "",
+                                          "userType": "social"]
+                            
+                            self.viewModel.registerUser(parameters: params) { registeredUser, error in
+                                
+                                Endpoint.authToken = registeredUser?.user?.accessToken
+                                Utility.shared.user?.isProfileSet = registeredUser?.user?.isProfileSet
+                                if error == nil {
+                                    MBProgressHUD.hide(for: self.view, animated: true)
+                                    if !(Utility.shared.user?.isProfileSet ?? false) {
+                                        let VC = DanetkasHelper.getViewController(storyboard: .Profile, identifier: .ProfileVC)
+                                        self.present(to: VC, completion: nil)
+                                    } else {
+                                        self.pop(completion: nil)
+                                    }
+                                } else {
+                                    MBProgressHUD.hide(for: self.view, animated: true)
+                                    self.showSimpleAlert(title: Constant.title, message: error)
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -199,10 +236,38 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             // For the purpose of this demo app, store the `userIdentifier` in the keychain.
             self.saveUserInKeychain(userIdentifier)
             
-            print(userIdentifier,fullName,email)
+            DispatchQueue.main.async {
+                
+                if let email = email {
+                    
+                    var user = GameUser()
+                    user.email = email
+                    user.userType = "social"
+                    
+                    Utility.shared.user = user
+                    
+                    let params = ["email": Utility.shared.user?.email ?? "",
+                                  "userType":"social"]
+                    self.viewModel.registerUser(parameters: params) { registeredUser, error in
+                        
+                        Endpoint.authToken = registeredUser?.user?.accessToken
+                        Utility.shared.user?.isProfileSet = registeredUser?.user?.isProfileSet
+                        if error == nil {
+                            MBProgressHUD.hide(for: self.view, animated: true)
+                            if !(Utility.shared.user?.isProfileSet ?? false) {
+                                let VC = DanetkasHelper.getViewController(storyboard: .Profile, identifier: .ProfileVC)
+                                self.present(to: VC, completion: nil)
+                            } else {
+                                self.pop(completion: nil)
+                            }
+                        } else {
+                            MBProgressHUD.hide(for: self.view, animated: true)
+                            self.showSimpleAlert(title: Constant.title, message: error)
+                        }
+                    }
+                }
+            }
             
-            // For the purpose of this demo app, show the Apple ID credential information in the `ResultViewController`.
-            self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
         
         case let passwordCredential as ASPasswordCredential:
         
@@ -226,25 +291,6 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
         } catch {
             print("Unable to save userIdentifier to keychain.")
         }
-    }
-    
-    private func showResultViewController(userIdentifier: String, fullName: PersonNameComponents?, email: String?) {
-//        guard let viewController = self.presentingViewController as? ResultViewController
-//            else { return }
-//
-//        DispatchQueue.main.async {
-//            viewController.userIdentifierLabel.text = userIdentifier
-//            if let givenName = fullName?.givenName {
-//                viewController.givenNameLabel.text = givenName
-//            }
-//            if let familyName = fullName?.familyName {
-//                viewController.familyNameLabel.text = familyName
-//            }
-//            if let email = email {
-//                viewController.emailLabel.text = email
-//            }
-//            self.dismiss(animated: true, completion: nil)
-//        }
     }
     
     private func showPasswordCredentialAlert(username: String, password: String) {

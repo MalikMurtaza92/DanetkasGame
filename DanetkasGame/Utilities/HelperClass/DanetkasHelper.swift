@@ -16,4 +16,9 @@ struct DanetkasHelper{
         return VC
     }
     
+    static func generateCurrentTimeStamp () -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy_MM_dd_hh_mm_ss"
+        return (formatter.string(from: Date()) as NSString) as String
+    }
 }

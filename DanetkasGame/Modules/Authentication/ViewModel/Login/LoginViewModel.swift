@@ -8,7 +8,6 @@
 import UIKit
 import GoogleSignIn
 import MBProgressHUD
-import FBSDKCoreKit
 import FBSDKLoginKit
 
 class LoginViewModel {
